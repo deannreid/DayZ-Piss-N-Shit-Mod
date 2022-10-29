@@ -1,0 +1,11 @@
+	name="PissNShit";
+	picture = "PissNShit/PNS_Core/Assets/Images/logoOpaque.edds";
+	logo = "PissNShit/PNS_Core/Assets/Images/logoOpaque.edds";
+	logoSmall = "PissNShit/PNS_Core/Assets/Images/logoOpaque.edds";
+	logoOver = "PissNShit/PNS_Core/Assets/Images/logoOpaque.edds";
+	action="https://github.com/deannreid/DayZ-Piss-N-Shit-Mod";
+	author="BigDeano";
+	authorID="76561198001768308";
+	version = "1.0.000";
+	overview = "A mod that adds Pissing and Shitting to DayZ - If you don't empty that Bladder then prepare to die.";
+	tooltip = "A mod that adds Pissing and Shitting to DayZ - If you don't empty that Bladder then prepare to die.";
