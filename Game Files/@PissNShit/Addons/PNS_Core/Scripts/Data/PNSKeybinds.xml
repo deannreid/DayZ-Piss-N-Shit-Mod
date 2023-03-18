@@ -7,7 +7,7 @@
 			<input name="PNSShit" loc="STR_PNS_SHIT" />
 			<input name="PNSVomit" loc="STR_PNS_VOMIT" />
         </actions>
-		<sorting name="acs" loc="STR_PNS_MENU">
+		<sorting name="pns" loc="STR_PNS_MENU">
 			<input name="PNSSettings"/>
 			<input name="PNSPiss"/>
 			<input name="PNSShit"/>
@@ -16,16 +16,16 @@
     </inputs>
     <preset>
         <input name="PNSSettings">
-            <btn name="kN" />
+            <btn name="" />
         </input>
         <input name="PNSPiss">
-            <btn name="kINSERT" />
+            <btn name="" />
         </input>
         <input name="PNSShit">
-            <btn name="kINSERT" />
+            <btn name="" />
         </input>
         <input name="PNSVomit">
-            <btn name="kINSERT" />
+            <btn name="" />
         </input>
     </preset>
 </modded_inputs>

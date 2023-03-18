@@ -1,0 +1,43 @@
+FrameWidgetClass rootFrame {
+ position 62.9738 50.379
+ size 629.73804 75.5685
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  FrameWidgetClass PNSUI_PISS_MAIN {
+   position 12.5948 5.00001
+   size 644.92706 65.5685
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   {
+    TextWidgetClass lblPiss {
+     ignorepointer 1
+     color 0.298 0.098 0.098 1
+     position 12.5948 12.5948
+     size 254.48999 37.4052
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Rectum Volume"
+     font "gui/fonts/metron22"
+    }
+    ProgressBarWidgetClass pgbPiss {
+     ignorepointer 1
+     position 304.86899 12.5948
+     size 302.27301 40.379
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Default
+     current 30
+    }
+   }
+  }
+ }
+}

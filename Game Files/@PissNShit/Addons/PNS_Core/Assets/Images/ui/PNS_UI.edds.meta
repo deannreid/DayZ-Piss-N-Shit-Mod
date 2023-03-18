@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{9219F2DAF2AB14BC}@PissNShit/Addons/PNS_Core/Assets/PNS_UI.edds"
+ Author "desktop-qs5p323"
+ ChangeDate -187421307
+ Configurations {
+  PAAResourceClass PC {
+   SourceFile "PNS_UI.paa"
+  }
+  PAAResourceClass XBOX_ONE : PC {
+  }
+  PAAResourceClass PS4 : PC {
+  }
+  PAAResourceClass LINUX : PC {
+  }
+ }
+}

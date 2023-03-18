@@ -1,0 +1,74 @@
+ImageSetClass {
+ Name "PNS_UI_IS"
+ RefSize 2048 2048
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{B7AE8250F48954DB}@PissNShit/Addons/PNS_Core/Assets/Images/ui/PNS_UI.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass icoBladder4 {
+   Name "icoBladder4"
+   Pos 488 488
+   Size 304 304
+   Flags 0
+  }
+  ImageSetDefClass icoBladder3 {
+   Name "icoBladder3"
+   Pos 489 800
+   Size 305 304
+   Flags 0
+  }
+  ImageSetDefClass icoBladder2 {
+   Name "icoBladder2"
+   Pos 490 1112
+   Size 302 304
+   Flags 0
+  }
+  ImageSetDefClass icoBladder1 {
+   Name "icoBladder1"
+   Pos 489 1425
+   Size 302 302
+   Flags 0
+  }
+  ImageSetDefClass icoBladder0 {
+   Name "icoBladder0"
+   Pos 489 1737
+   Size 302 302
+   Flags 0
+  }
+  ImageSetDefClass icoRectum4 {
+   Name "icoRectum4"
+   Pos 800 487
+   Size 305 306
+   Flags 0
+  }
+  ImageSetDefClass icoRectum1 {
+   Name "icoRectum1"
+   Pos 801 1424
+   Size 304 302
+   Flags 0
+  }
+  ImageSetDefClass icoRectum2 {
+   Name "icoRectum2"
+   Pos 799 1112
+   Size 304 304
+   Flags 0
+  }
+  ImageSetDefClass icoRectum3 {
+   Name "icoRectum3"
+   Pos 801 799
+   Size 304 304
+   Flags 0
+  }
+  ImageSetDefClass icoRectum0 {
+   Name "icoRectum0"
+   Pos 801 1736
+   Size 303 303
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

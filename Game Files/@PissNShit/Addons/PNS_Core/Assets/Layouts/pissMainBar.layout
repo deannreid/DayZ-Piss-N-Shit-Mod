@@ -1,0 +1,33 @@
+FrameWidgetClass PNSUI_PISS_MAIN {
+ position 75.5686 50.379
+ size 644.92706 65.5685
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  TextWidgetClass lblPiss {
+   ignorepointer 1
+   color 0.0157 0.3373 0.6627 1
+   position 12.5948 12.5948
+   size 304.86899 37.4052
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Bladder Volume"
+   font "gui/fonts/metron22"
+  }
+  ProgressBarWidgetClass pgbPiss {
+   ignorepointer 1
+   position 304.86899 12.5948
+   size 302.27301 40.379
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style Default
+   current 30
+  }
+ }
+}

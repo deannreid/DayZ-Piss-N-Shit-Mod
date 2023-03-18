@@ -1,0 +1,10 @@
+enum PNSRPC {
+    ACSRPC_START = 61251632,
+
+    // Server RPC's
+    RPC_SERVER_ADMINMENU,
+
+    // Client RPC's
+    RPC_CLIENT_HANDLEUI,
+    RPC_CLIENT_SETCONFIG
+}

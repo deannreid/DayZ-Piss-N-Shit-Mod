@@ -18,62 +18,57 @@ class CfgPatches {
 	class PNS_Core {
 		requiredVersion=0.1;
 		requiredAddons[]= {
+
 			"DZ_Data",
-			"DZ_Scripts",
-			"DZ_Characters_Headgear"
+			"DZ_Scripts"
 		};
 	};
 };
 
-class CfgMods
-{
-	class AutoSorting
-	{
-		dir="PissNShit/PNS_Core";
+class CfgMods {
+	class PissNShit {
+		dir="PNS_Core";
 		type="mod";
-		picture="PissNShit/PNS_Core/Assets/Images/logoOpaque.edds";
-		inputs="PissNShit/PNS_Core/Scripts/Data/ACSKeybinds.xml";
-		dependencies[]=
-		{
+		picture="PNS_Core\Assets\Images\logo\logoOpaque.edds";
+		inputs="PNS_Core/Scripts/Data/PNSKeybinds.xml";
+		dependencies[]= {
 			"World", "Mission"
 		};
-		class defs
-		{
-			class coreScriptModule
-            {
+		class defs {
+			class imageSets {
+				files[]= {
+					"PNS_Core/Assets/Imagesets/PNS_UI.imageset"
+				};
+			}
+			class coreScriptModule {
                 value = "";
                 files[] = {
-					"PissNShit/PNS_Core/Scripts/1_Core"
+					"PNS_Core/Scripts/1_Core"
 				};
             };
-			class gameScriptModule
-			{
+			class gameScriptModule {
 				value="";
-				files[]={
-					"PissNShit/PNS_Core/Scripts/3_Game"};
+				files[]= {
+					"PNS_Core/Scripts/3_Game"};
 			};
-			class worldScriptModule
-			{
+			class worldScriptModule {
 				value="";
-				files[]={
-					"PissNShit/PNS_Core/Scripts/4_World"};
+				files[]= {
+					"PNS_Core/Scripts/4_World"};
 			};
-			class missionScriptModule
-			{
+			class missionScriptModule {
 				value="";
-				files[]={
-					"PissNShit/PNS_Core/Scripts/5_Mission"};
+				files[]= {
+					"PNS_Core/Scripts/5_Mission"};
 			};
 		};
 	};
 };
-
-/*class CfgSlots
-{
-	class Slot_SortingHat
-	{
-		name="Sorting Hat";
-		displayName="Sorting Hat";
-		ghostIcon="missing";
-	};
-};*/
+class CfgVehicles {
+	class StaticObject;
+	class House;
+	class Inventory_Base;
+};
+class CfgNonAIVehicles {
+	class StaticObject;
+};
