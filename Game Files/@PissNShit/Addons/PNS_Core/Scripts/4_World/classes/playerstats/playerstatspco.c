@@ -28,15 +28,17 @@ modded class PCOHandlerStats {
 };
 	enum EPlayerStats_PNSMod
 	{
-		URINE,
-		RECTUM
+		BLADDER,
+		BOWEL
 	}
 
 class PlayerStatsPCO_PNSMod extends PlayerStatsPCO_Base {
 
 	override void Init()
-	{
-		RegisterStat(	EPlayerStats_PNSMod.URINE, 		new PlayerStat<float> 	(0,5000,500,"Urine", EPSstatsFlags.EMPTY)	);
-		RegisterStat(	EPlayerStats_PNSMod.RECTUM, 	new PlayerStat<float>  	(0,5000,500,"Poop" , EPSstatsFlags.EMPTY)	);
+	{	
+		RegisterStat(	EPlayerStats_PNSMod.BLADDER, 		new PlayerStat<float> 	(0,5000,500,"Urine", EPSstatsFlags.EMPTY)	);
+		Print("[PNS - PlayerStats] :: STAT: " + EPlayerStats_PNSMod.BLADDER + " Registered");
+		RegisterStat(	EPlayerStats_PNSMod.BOWEL, 			new PlayerStat<float>  	(0,5000,500,"Poop" , EPSstatsFlags.EMPTY)	);
+		Print("[PNS - PlayerStats] :: STAT: " + EPlayerStats_PNSMod.BOWEL   + " Registered");
 	}
 }

@@ -19,59 +19,55 @@ modded class MissionGameplay {
 
 	// UI reference
 	PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
-	ItemBase iteminhands;
 	
 	void MissionGameplay() {
 		
 	}
 	
 	void ~MissionGameplay() {
+
 	}
 	
-	override void OnInit()
-    {
+	override void OnInit() {
         super.OnInit();
 
 		Print("[PNS - LogHandler] :: [DEBUG] :: ([missionGameplay] :: OnInit - Client"); 
-		//GetPNSLogger().WriteDebug("- [missionGameplay] :: OnInit - Client"); 
+		//PNSKeybindHelper.RegisterBind("OBJECT TO BIND", PNSBinds.Press, "TITLE OF OBJECT", this);
 		PNSKeybindHelper.RegisterBind("PNSSettings", PNSBinds.Press, "STR_PNS_SETTINGS", this);
 		PNSKeybindHelper.RegisterBind("PNSPiss", PNSBinds.Press,  "STR_PNS_PISS", this);
 		PNSKeybindHelper.RegisterBind("PNSShit", PNSBinds.Press,  "STR_PNS_SHIT", this);
 		PNSKeybindHelper.RegisterBind("PNSVomit", PNSBinds.Press,  "STR_PNS_VOMIT", this);
 	}
 	
-	override void OnMissionStart()
-    {
+	override void OnMissionStart() {
         super.OnMissionStart();
         Print("[PNS - missionGameplay] :: OnMissionStart - Client");
 		//GetPNSLogger().WriteDebug("- [missionGameplay] :: OnMissionStart - Client"); 
 		
     }
 
-    override void OnMissionFinish()
-    {
+    override void OnMissionFinish() {
         super.OnMissionFinish();
         Print("[PNS - missionGameplay] :: OnMissionFinish - Client");
 		//GetPNSLogger().WriteDebug("- [missionGameplay] :: OnMissionStart - Client"); 
     }
-	
-	override void OnUpdate(float timeslice)
-	{
+	/*
+	 * Not Yet Required
+	 *
+	override void OnUpdate(float timeslice) {
 		super.OnUpdate(timeslice);
 	}
 			
-	override void Pause()
-	{
+	override void Pause() {
         super.Pause();
 	}
 	
-	override void Continue()
-	{
+	override void Continue() {
         super.Continue();
 	}
 
-	override void OnKeyPress(int key)
-	{
+	override void OnKeyPress(int key) {
 		super.OnKeyPress(key);
 	}	
+	*/
 }

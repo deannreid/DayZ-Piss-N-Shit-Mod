@@ -15,28 +15,45 @@
  * 05/12/2022 - Initial Code Development
  */
 
-modded class PlayerBase {
+modded class PlayerBase extends ManBase
+{
+    private float m_BladderLevel;  // Urination level is between 0 and 10, where 0 means the player doesn't need to urinate and 1 means they urgently need to urinate
+    private float m_BowelLevel;  // Poop level is between 0 and 10, where 0 means the player doesn't need to urinate and 1 means they urgently need to urinate
+	protected PlayerStat<float> m_StatBladder;
+	protected PlayerStat<float> m_StatBowel;
+		
+    void PlayerBase() {
+        /* 
+		 * Level to Increase by 1 every 10 Minutes
+		 * or increase by 1 when player drinks a full container of liquid
+		 */
+    }
 
-	protected PlayerStat<float> m_StatUrine;
-	protected PlayerStat<float> m_StatRectum;
-	
-
-	
-	PlayerStat<float> GetStatUrine()
-	{
-		if( !m_StatUrine && GetPlayerStats())
+	PlayerStat<float> GetStatBladder() {
+		if( !m_StatBladder && GetPlayerStats())
 		{
-			m_StatUrine = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.URINE));
+			m_StatBladder = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BLADDER));
 		}
-		return m_StatUrine;
+		return m_StatBladder;
 	}
 	
-	PlayerStat<float> GetStatRectum()
-	{
-		if( !m_StatRectum && GetPlayerStats())
+	PlayerStat<float> GetStatBowel() {
+		if( !m_StatBowel && GetPlayerStats())
 		{
-			m_StatRectum = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.RECTUM));
+			m_StatBowel = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BOWEL));
 		}
-		return m_StatRectum;
+		return m_StatBowel;
+	}	
+
+	EStatLevels GetStatLevelBladder()
+	{
+		float bladder = GetStatBladder().Get();
+		return GetStatLevel(bladder, PlayerConstants.SL_BLADDER_CRITICAL, PlayerConstants.SL_BLADDER_LOW, PlayerConstants.SL_BLADDER_NORMAL, PlayerConstants.SL_BLADDER_HIGH);
+	}
+
+	EStatLevels GetStatLevelBowel()
+	{
+		float bowel = GetStatBowel().Get();
+		return GetStatLevel(bowel, PlayerConstants.SL_BOWEL_CRITICAL, PlayerConstants.SL_BOWEL_LOW, PlayerConstants.SL_BOWEL_NORMAL, PlayerConstants.SL_BOWEL_HIGH);
 	}
 }

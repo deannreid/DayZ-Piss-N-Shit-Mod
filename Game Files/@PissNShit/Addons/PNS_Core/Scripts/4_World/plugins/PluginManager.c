@@ -17,13 +17,19 @@
 
 modded class PluginManager {
 	override void Init() {
-	 super.Init();
-		Print("[PNS - PluginManager] :: [DEBUG] :: Loading Plugin Classes");
-		//Register Modules
-		//              Module Class :           Client  |  Server
-		RegisterPlugin("PNSLogHelper",			 false, 	true);
-		RegisterPlugin("PNSClientRPC", 			 true, 		false);
-		RegisterPlugin("PNSServerRPC", 			 false, 	true);
-		RegisterPlugin("PNSKeybindHelper", 		 true, 		false);		
+		super.Init();
+			Print("[PNS - PluginManager] :: [DEBUG] :: Loading Plugin Classes");
+			//Register Modules
+			//              Module Class :           Client  |  Server
+			/*Server Only Plugins*/
+			RegisterPlugin("PNSLogHelper",			 false, 	true);
+			RegisterPlugin("PNSServerRPC", 			 false, 	true);
+
+			/*Client Only Plugins*/
+			RegisterPlugin("PNSClientRPC", 			 true, 		false);
+			RegisterPlugin("PNSKeybindHelper", 		 true, 		false);	
+
+			/*Clnt & Srvr Plugins*/
+			//RegisterPlugin("", 			 true, 		true);
 	}
 }

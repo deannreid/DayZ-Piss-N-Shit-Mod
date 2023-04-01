@@ -17,5 +17,5 @@
 
 enum eModifiersPNS {
 	MDF_BLADDER = 54,
-	MDF_RECTUM,
+	MDF_BOWEL,
 }

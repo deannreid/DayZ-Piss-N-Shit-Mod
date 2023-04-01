@@ -40,18 +40,19 @@ class BladderMdfr: ModifierBase
 	override void OnTick(PlayerBase player, float deltaT)
 	{
 		player.GetMovementState(m_MovementState);
-		float urine = player.GetStatUrine().Get();
-		float metabolic_speed = MiscGameplayFunctions.GetWaterMetabolicSpeed(m_MovementState.m_iMovement);
+		float urine = player.GetStatBladder().Get();
+		float metabolic_speed = MiscGameplayFunctions.GetBladderMetabolicSpeed(m_MovementState.m_iMovement);	
 		
-		float modifier = urine/PlayerConstants.SL_WATER_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
+		float modifier = urine/PlayerConstants.SL_BLADDER_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
 		metabolic_speed *= modifier; //non linear shaping for consumption curve (comment out to have it linear)
 		
-		player.GetStatUrine().Add( (-metabolic_speed * deltaT) );
+		player.GetStatBladder().Add( (-metabolic_speed * deltaT) );
 		
-		if ( urine <= PlayerConstants.HIGH_URINE_THRESHOLD )
+		if ( urine >= PlayerConstants.HIGH_BLADDER_THRESHOLD )
 		{	
 			if( !player.GetStomach().IsDigesting() )	
-				player.AddHealth("GlobalHealth", "Health", -PlayerConstants.LOW_WATER_DAMAGE_PER_SEC * deltaT );
+				// Will Lower health by set amount if the player doesn't pee 
+				player.AddHealth("GlobalHealth", "Health", -PlayerConstants.HIGH_BLADDER_DAMAGE_PER_SEC * deltaT );
 		}
 	}
 }

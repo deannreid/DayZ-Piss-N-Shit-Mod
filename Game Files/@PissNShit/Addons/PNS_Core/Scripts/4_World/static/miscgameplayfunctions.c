@@ -15,48 +15,49 @@
  * 05/12/2022 - Initial Code Development
  */
 
-static float GetUrineMetabolicSpeed(int movement_speed)
-{
-	float speed;
-	switch (movement_speed)
-	{
-		case DayZPlayerConstants.MOVEMENTIDX_WALK:
-			speed = PlayerConstants.METABOLIC_SPEED_URINE_WALK;
-		break;
-		case DayZPlayerConstants.MOVEMENTIDX_RUN:
-			speed = PlayerConstants.METABOLIC_SPEED_URINE_JOG;
-		break;
-		case DayZPlayerConstants.MOVEMENTIDX_SPRINT:
-			speed = PlayerConstants.METABOLIC_SPEED_URINE_SPRINT;
-		break;
-		default:
-			speed = 0;
-		break;
+/* Add Bladder effects when player is Walking, Running or Jogging */
+modded class MiscGameplayFunctions {
+	static float GetBladderMetabolicSpeed(int movement_speed) {
+		float speed;
+		switch (movement_speed) {
+			case DayZPlayerConstants.MOVEMENTIDX_WALK:
+				speed = PlayerConstants.METABOLIC_SPEED_BLADDER_WALK;
+			break;
+			case DayZPlayerConstants.MOVEMENTIDX_RUN:
+				speed = PlayerConstants.METABOLIC_SPEED_BLADDER_JOG;
+			break;
+			case DayZPlayerConstants.MOVEMENTIDX_SPRINT:
+				speed = PlayerConstants.METABOLIC_SPEED_BLADDER_SPRINT;
+			break;
+			default:
+				speed = 0;
+			break;
+		}
+
+		speed += PlayerConstants.METABOLIC_SPEED_BLADDER_BASAL;
+		return speed;
 	}
 
-	speed += PlayerConstants.METABOLIC_SPEED_URINE_BASAL;
-	return speed;
-}
+/* Add Poop effects when player is Walking, Running or Jogging */
+	static float GetBowelMetabolicSpeed(int movement_speed) {
+		float speed;
+		switch (movement_speed)
+		{
+			case DayZPlayerConstants.MOVEMENTIDX_WALK:
+				speed = PlayerConstants.METABOLIC_SPEED_BOWEL_WALK;
+			break;
+			case DayZPlayerConstants.MOVEMENTIDX_RUN:
+				speed = PlayerConstants.METABOLIC_SPEED_BOWEL_JOG;
+			break;
+			case DayZPlayerConstants.MOVEMENTIDX_SPRINT:
+				speed = PlayerConstants.METABOLIC_SPEED_BOWEL_SPRINT;
+			break;
+			default:
+				speed = 0;
+			break;
+		}
 
-static float GetRectumMetabolicSpeed(int movement_speed)
-{
-	float speed;
-	switch (movement_speed)
-	{
-		case DayZPlayerConstants.MOVEMENTIDX_WALK:
-			speed = PlayerConstants.METABOLIC_SPEED_RECTUM_WALK;
-		break;
-		case DayZPlayerConstants.MOVEMENTIDX_RUN:
-			speed = PlayerConstants.METABOLIC_SPEED_RECTUM_JOG;
-		break;
-		case DayZPlayerConstants.MOVEMENTIDX_SPRINT:
-			speed = PlayerConstants.METABOLIC_SPEED_RECTUM_SPRINT;
-		break;
-		default:
-			speed = 0;
-		break;
+		speed += PlayerConstants.METABOLIC_SPEED_BOWEL_BASAL;
+		return speed;
 	}
-
-	speed += PlayerConstants.METABOLIC_SPEED_RECTUM_BASAL;
-	return speed;
 }
