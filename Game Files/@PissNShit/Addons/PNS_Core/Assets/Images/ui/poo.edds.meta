@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{89C737A3DD0C6FC0}@PissNShit/Addons/PNS_Core/Assets/Images/ui/poo.edds"
+ Author "desktop-23q3u52"
+ ChangeDate 1567485569
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "poo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
