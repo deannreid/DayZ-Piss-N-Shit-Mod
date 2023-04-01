@@ -6,7 +6,7 @@ FrameWidgetClass rootFrame {
  hexactsize 1
  vexactsize 1
  {
-  FrameWidgetClass PNSUI_PISS_MAIN {
+  FrameWidgetClass PNSUI_BOWEL_MAIN {
    position 12.5948 5.00001
    size 644.92706 65.5685
    hexactpos 1
@@ -14,7 +14,7 @@ FrameWidgetClass rootFrame {
    hexactsize 1
    vexactsize 1
    {
-    TextWidgetClass lblPiss {
+    TextWidgetClass lblBowel {
      ignorepointer 1
      color 0.298 0.098 0.098 1
      position 12.5948 12.5948
@@ -23,10 +23,10 @@ FrameWidgetClass rootFrame {
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     text "Rectum Volume"
+     text "Bowel Volume"
      font "gui/fonts/metron22"
     }
-    ProgressBarWidgetClass pgbPiss {
+    ProgressBarWidgetClass pgbBowel {
      ignorepointer 1
      position 304.86899 12.5948
      size 302.27301 40.379
@@ -35,7 +35,7 @@ FrameWidgetClass rootFrame {
      hexactsize 1
      vexactsize 1
      style Default
-     current 30
+     current 80
     }
    }
   }
