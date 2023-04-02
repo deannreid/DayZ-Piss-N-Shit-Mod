@@ -155,12 +155,6 @@ modded class IngameHud extends Hud
 	
 	ref array<ref HitDirectionEffectBase> 		m_HitDirEffectArray;
 		
-	/*
-	 * PNS 
-	 */
-	
-	int m
-	
 	void IngameHud()
 	{
 		m_FadeTimerCrosshair			= new WidgetFadeTimer;
@@ -313,11 +307,17 @@ modded class IngameHud extends Hud
 		//ShowQuickBar(GetGame().GetInput().IsEnabledMouseAndKeyboardEvenOnServer() && g_Game.GetProfileOption(EDayZProfilesOptions.QUICKBAR)); //unreliable
 	}
 	
-	void InitBadgesAndNotifiers()
+	override void InitBadgesAndNotifiers()
 	{
 		// state notifiers
 		m_StatesWidgetNames.Clear();
 		m_StatesWidgets.Clear();
+		
+		
+		m_StatesWidgetNames.Set( NTFKEY_BLADDER, "Bladder" );	
+		m_StatesWidgetNames.Set( NTFKEY_BOWEL, "Bowel" );
+		
+		
 		m_StatesWidgetNames.Set( NTFKEY_THIRSTY, "Thirsty" );
 		m_StatesWidgetNames.Set( NTFKEY_HUNGRY, "Hungry" );
 		m_StatesWidgetNames.Set( NTFKEY_SICK, "Health" );
@@ -329,19 +329,27 @@ modded class IngameHud extends Hud
 
 		int i = 0;
 		int key = 0;
+		
 		for ( i = 0; i < m_StatesWidgetNames.Count(); i++ )
 		{
 			string widget_name = m_StatesWidgetNames.GetElement(i);
-			key = m_StatesWidgetNames.GetKey(i);
-			ImageWidget w;
-			Class.CastTo(w,  m_Notifiers.FindAnyWidget( String( "Icon" + widget_name ) ) );
-			m_StatesWidgets.Set( key, w );
-			w.Show( true );
-			for ( int y = 0; y < 5; y++ )
+				key = m_StatesWidgetNames.GetKey(i);
+				ImageWidget w;
+				Class.CastTo(w,  m_Notifiers.FindAnyWidget( String( "Icon" + widget_name ) ) );
+				m_StatesWidgets.Set( key, w );
+				w.Show( true );			
+			if (widget_name == "Thirsty" || widget_name == "Hungry" || widget_name == "Health" || widget_name == "Blood" || widget_name == "Temperature")
 			{
-				w.LoadImageFile( y, "set:dayz_gui image:icon" + widget_name + y );
+				for ( int y = 0; y < 5; y++ ) {
+					w.LoadImageFile( y, "set:dayz_gui image:icon" + widget_name + y );
+				}
 			}
-		
+			if (widget_name == "Bladder" || widget_name == "Bowel")
+			{
+				for ( int z = 0; z < 5; z++ ) {
+					w.LoadImageFile( z, "set:PNS_UI image:icon" + widget_name + z );
+				}
+			}		
 			w.SetImage( 0 );
 			float alpha = w.GetAlpha();
 			w.SetColor( ARGB( alpha * 255, 220, 220, 220 ) );	//white
@@ -386,7 +394,7 @@ modded class IngameHud extends Hud
 	
 	}
 	
-	void OnConnectionIconsSettingsChanged(bool enabled)
+	override void OnConnectionIconsSettingsChanged(bool enabled)
 	{
 		m_GameStatusIconsPanel.Show(enabled);
 	}
@@ -513,7 +521,7 @@ modded class IngameHud extends Hud
 		}
 	}
 	
-	void DisplayTendencyNormal( int key, int tendency, int status )
+	override void DisplayTendencyNormal( int key, int tendency, int status )
 	{
 		ImageWidget w;
 		Class.CastTo(w,  m_Notifiers.FindAnyWidget( String( "Icon" + m_StatesWidgetNames.Get( key ) ) ) );
@@ -547,7 +555,7 @@ modded class IngameHud extends Hud
 		}	
 	}
 	
-	void DisplayTendencyTemp( int key, int tendency, int status )
+	override void DisplayTendencyTemp( int key, int tendency, int status )
 	{
 		ImageWidget w = ImageWidget.Cast( m_Notifiers.FindAnyWidget( String( "Icon" + m_StatesWidgetNames.Get( key ) ) ) );
 		TextWidget temp_top = TextWidget.Cast( m_Notifiers.FindAnyWidget( "TemperatureValueTop" ) );
@@ -659,7 +667,7 @@ modded class IngameHud extends Hud
 		m_TemperatureTimer = 0;
 	}
 	
-	void HideTemperature()
+	override void HideTemperature()
 	{
 		m_IsTemperatureVisible = false;
 		TextWidget temp_top = TextWidget.Cast( m_Notifiers.FindAnyWidget( "TemperatureValueTop" ) );
@@ -691,7 +699,7 @@ modded class IngameHud extends Hud
 	// state 0 = empty
 	// state 1 = digesting
 	// state 2 = full
-	void SetStomachState( int state )
+	override void SetStomachState( int state )
 	{
 		ImageWidget stomach = ImageWidget.Cast( m_Badges.FindAnyWidget( "Stomach" ) );
 		stomach.LoadImageFile( 0, "set:dayz_gui image:iconStomach" + state );
@@ -743,12 +751,12 @@ modded class IngameHud extends Hud
 		GetDayZGame().GetBacklit().UpdatePlayer(false);		
 	}
 
-	bool KeyPress(int key)
+	override bool KeyPress(int key)
 	{
 		return false;
 	}
 	
-	void ZeroingKeyPress()
+	override void ZeroingKeyPress()
 	{
 		m_ZeroingKeyPressed = true;
 	}
@@ -877,7 +885,7 @@ modded class IngameHud extends Hud
 		m_VehicleGearCount	= -1;
 	}
 	
-	void RefreshVehicleHud(float timeslice)
+	override void RefreshVehicleHud(float timeslice)
 	{
 		if (m_CurrentVehicle && !GetGame().GetUIManager().GetMenu())
 		{
@@ -1037,7 +1045,7 @@ modded class IngameHud extends Hud
 		}
 	}
 	
-	void InitQuickbar()
+	override void InitQuickbar()
 	{
 		if (m_Quickbar == NULL)
 		{
@@ -1050,23 +1058,23 @@ modded class IngameHud extends Hud
 		return m_Quickbar;
 	}
 	
-	bool IsQuickbarVisible()
+	override bool IsQuickbarVisible()
 	{
 		return m_IsQuickbarVisible;
 	}
 	
-	bool IsHudVisible()
+	override bool IsHudVisible()
 	{
 		return m_IsHudVisible;
 	}
 	
-	void RefreshQuickbarVisibility()
+	override void RefreshQuickbarVisibility()
 	{
 		m_IsQuickbarVisible = !m_QuickbarHideUI && !m_QuickbarHidePlayer && m_QuickbarState;
 		m_QuickbarWidget.Show( m_IsQuickbarVisible );
 	}
 	
-	void RefreshHudVisibility()
+	override void RefreshHudVisibility()
 	{
 		m_IsHudVisible = ( !m_HudHidePlayer && !m_HudHideUI && m_HudState ) || m_HudInventory;
 		
@@ -1081,19 +1089,19 @@ modded class IngameHud extends Hud
 		#endif
 	}
 	
-	void UpdateSpecialtyMeter(float x, float y)
+	override void UpdateSpecialtyMeter(float x, float y)
 	{
 		#ifdef PLATFORM_CONSOLE
 		m_SpecializationIcon.SetPos(x, y, true);
 		#endif
 	}
 	
-	bool IsHideQuickbarPlayer()
+	override bool IsHideQuickbarPlayer()
 	{
 		return m_QuickbarHidePlayer;
 	}
 	
-	bool IsHideHudPlayer()
+	override bool IsHideHudPlayer()
 	{
 		return m_HudHidePlayer;
 	}
@@ -1155,12 +1163,12 @@ modded class IngameHud extends Hud
 		RefreshHudVisibility();
 	}
 	
-	bool GetQuickBarState()
+	override bool GetQuickBarState()
 	{
 		return m_QuickbarState;
 	}
 	
-	bool GetHudState()
+	override bool GetHudState()
 	{
 		return m_HudState;
 	}
@@ -1220,7 +1228,7 @@ modded class IngameHud extends Hud
 	}
 	
 	//! eg. stamina bar...
-	void SetLeftStatsVisibility(bool visible)
+	override void SetLeftStatsVisibility(bool visible)
 	{
 		Widget child = m_LeftHudPanelWidget.GetChildren();
 		while (child)
@@ -1265,7 +1273,7 @@ modded class IngameHud extends Hud
 		}
 	}
 	
-	Widget GetHudPanelWidget()
+	override Widget GetHudPanelWidget()
 	{
 		return m_HudPanelWidget;
 	}
@@ -1298,7 +1306,7 @@ modded class IngameHud extends Hud
 		}
 	}
 	
-	void RefreshPlayerTags()
+	override void RefreshPlayerTags()
 	{
 		if( GetGame().GetPlayer() )
 		{
@@ -1343,7 +1351,7 @@ modded class IngameHud extends Hud
 	Widget		m_PlayerTag;
 	TextWidget	m_PlayerTagText;
 	
-	void ShowPlayerTag( float timeslice )
+	override void ShowPlayerTag( float timeslice )
 	{
 		if( m_CurrentTaggedPlayer && m_CurrentTaggedPlayer.GetIdentity() )
 		{
@@ -1478,7 +1486,7 @@ modded class IngameHud extends Hud
 		m_HitDirEffectArray.Insert(hiteff);
 	}
 	
-	void UpdateHitDirEffects( float timeslice )
+	override void UpdateHitDirEffects( float timeslice )
 	{
 		for (int i = 0; i < m_HitDirEffectArray.Count(); i++)
 		{
@@ -1486,7 +1494,7 @@ modded class IngameHud extends Hud
 		}
 	}
 	
-	void CleanupHitDirEffects()
+	override void CleanupHitDirEffects()
 	{
 		for (int i = m_HitDirEffectArray.Count() - 1; i > -1; i--)
 		{
@@ -1501,7 +1509,7 @@ modded class IngameHud extends Hud
 //ye olde unused methods
 	
 	//DEPRECATED
-	void HideQuickbarTimer()
+	override void HideQuickbarTimer()
 	{
 	}
 }

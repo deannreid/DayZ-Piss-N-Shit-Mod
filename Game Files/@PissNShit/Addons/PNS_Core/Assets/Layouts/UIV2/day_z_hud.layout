@@ -1926,8 +1926,8 @@ FrameWidgetClass HudFrameWidget {
          hexactsize 1
          vexactsize 1
          fixaspect fixwidth
-         image0 "set:PNS_UI_IS image:icoBladder0"
-         imageTexture "{D0B121D6827931CE}@PissNShit/Addons/PNS_Core/Assets/Images/ui/toilet.edds"
+         image0 "set:PNS_UI image:iconBladder0"
+         imageTexture ""
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -2089,28 +2089,6 @@ FrameWidgetClass HudFrameWidget {
        fixaspect fixwidth
        style blank
        {
-        ImageWidgetClass IconBowel {
-         color 0.8627 0.8627 0.8627 1
-         position 0 0
-         size 35 35
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         fixaspect fixwidth
-         image0 "set:PNS_UI_IS image:icoBowel0"
-         imageTexture "{89C737A3DD0C6FC0}@PissNShit/Addons/PNS_Core/Assets/Images/ui/poo.edds"
-         mode blend
-         "src alpha" 1
-         "no wrap" 1
-         stretch 0
-         "flip u" 0
-         "flip v" 0
-         filter 1
-         nocache 0
-        }
         ImageWidgetClass BowelArrowUp3 {
          visible 1
          clipchildren 1
@@ -2243,6 +2221,27 @@ FrameWidgetClass HudFrameWidget {
          "src alpha" 1
          "no wrap" 1
          stretch 0
+         "flip v" 0
+         filter 1
+         nocache 0
+        }
+        ImageWidgetClass IconBowel {
+         color 0.8627 0.8627 0.8627 1
+         position 0 0
+         size 35 35
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect fixwidth
+         image0 "set:PNS_UI image:iconBowel0"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 0
+         "flip u" 0
          "flip v" 0
          filter 1
          nocache 0

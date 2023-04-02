@@ -43,7 +43,7 @@ class BladderMdfr: ModifierBase
 		float urine = player.GetStatBladder().Get();
 		float metabolic_speed = MiscGameplayFunctions.GetBladderMetabolicSpeed(m_MovementState.m_iMovement);	
 		
-		float modifier = urine/PlayerConstants.SL_BLADDER_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
+		float modifier = urine*PlayerConstants.SL_BLADDER_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
 		metabolic_speed *= modifier; //non linear shaping for consumption curve (comment out to have it linear)
 		
 		player.GetStatBladder().Add( (-metabolic_speed * deltaT) );

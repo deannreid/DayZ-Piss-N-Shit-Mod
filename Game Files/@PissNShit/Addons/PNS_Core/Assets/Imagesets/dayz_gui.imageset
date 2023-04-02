@@ -1,0 +1,1852 @@
+ImageSetClass {
+ Name "dayz_gui"
+ RefSize 1024 1024
+ Textures {
+  ImageSetTextureClass {
+   mpix 0
+   path "{534691EE0479871C}Gui/imagesets/dayz_gui.edds"
+  }
+  ImageSetTextureClass {
+   mpix 1
+   path "{C139E49FD0ECAF9E}Gui/imagesets/dayz_gui@2x.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass Gradient {
+   Name "Gradient"
+   Pos 0 317
+   Size 75 5
+   Flags ISVerticalTile
+  }
+  ImageSetDefClass Expand {
+   Name "Expand"
+   Pos 121 257
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass ProgressDayZFull {
+   Name "ProgressDayZFull"
+   Pos 0 0
+   Size 444 208
+   Flags 0
+  }
+  ImageSetDefClass InventoryGridCenter {
+   Name "InventoryGridCenter"
+   Pos 0 256
+   Size 60 60
+   Flags 3
+  }
+  ImageSetDefClass InventoryGridLeftTop {
+   Name "InventoryGridLeftTop"
+   Pos 0 256
+   Size 10 10
+   Flags 0
+  }
+  ImageSetDefClass InventoryGridRightTop {
+   Name "InventoryGridRightTop"
+   Pos 50 256
+   Size 10 10
+   Flags 0
+  }
+  ImageSetDefClass InventoryGridLeftBottom {
+   Name "InventoryGridLeftBottom"
+   Pos 0 306
+   Size 10 10
+   Flags 0
+  }
+  ImageSetDefClass InventoryGridRightBottom {
+   Name "InventoryGridRightBottom"
+   Pos 50 306
+   Size 10 10
+   Flags 0
+  }
+  ImageSetDefClass InventoryGridTop {
+   Name "InventoryGridTop"
+   Pos 19 256
+   Size 10 10
+   Flags ISHorizontalTile
+  }
+  ImageSetDefClass InventoryGridLeft {
+   Name "InventoryGridLeft"
+   Pos 0 273
+   Size 10 10
+   Flags ISVerticalTile
+  }
+  ImageSetDefClass InventoryGridRight {
+   Name "InventoryGridRight"
+   Pos 38 273
+   Size 10 10
+   Flags ISVerticalTile
+  }
+  ImageSetDefClass InventoryGridBottom {
+   Name "InventoryGridBottom"
+   Pos 20 294
+   Size 10 10
+   Flags ISHorizontalTile
+  }
+  ImageSetDefClass editorQuadTopLeft {
+   Name "editorQuadTopLeft"
+   Pos 77 257
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadTopRight {
+   Name "editorQuadTopRight"
+   Pos 80 257
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadBottomLeft {
+   Name "editorQuadBottomLeft"
+   Pos 77 260
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadBottomRight {
+   Name "editorQuadBottomRight"
+   Pos 80 260
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadTop {
+   Name "editorQuadTop"
+   Pos 79 257
+   Size 1 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadBottom {
+   Name "editorQuadBottom"
+   Pos 79 260
+   Size 1 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadLeft {
+   Name "editorQuadLeft"
+   Pos 77 259
+   Size 2 1
+   Flags 0
+  }
+  ImageSetDefClass editorQuadRight {
+   Name "editorQuadRight"
+   Pos 80 259
+   Size 2 1
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelTopLeft {
+   Name "editorQuadSelTopLeft"
+   Pos 77 263
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelTopRight {
+   Name "editorQuadSelTopRight"
+   Pos 80 263
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelTop {
+   Name "editorQuadSelTop"
+   Pos 79 263
+   Size 1 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelBottom {
+   Name "editorQuadSelBottom"
+   Pos 79 266
+   Size 1 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelLeft {
+   Name "editorQuadSelLeft"
+   Pos 77 265
+   Size 2 1
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelRight {
+   Name "editorQuadSelRight"
+   Pos 80 265
+   Size 2 1
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelCenter {
+   Name "editorQuadSelCenter"
+   Pos 79 265
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelBottomRight {
+   Name "editorQuadSelBottomRight"
+   Pos 80 266
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass editorQuadSelBottomLeft {
+   Name "editorQuadSelBottomLeft"
+   Pos 77 266
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass Collapse {
+   Name "Collapse"
+   Pos 121 277
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass ColorableBar {
+   Name "ColorableBar"
+   Pos 90 257
+   Size 11 11
+   Flags 0
+  }
+  ImageSetDefClass editorQuadCenter {
+   Name "editorQuadCenter"
+   Pos 79 259
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass area_focus {
+   Name "area_focus"
+   Pos 157 257
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass close {
+   Name "close"
+   Pos 0 818
+   Size 71 96
+   Flags 0
+  }
+  ImageSetDefClass gear {
+   Name "gear"
+   Pos 76 819
+   Size 48 51
+   Flags 0
+  }
+  ImageSetDefClass reload {
+   Name "reload"
+   Pos 76 874
+   Size 37 48
+   Flags 0
+  }
+  ImageSetDefClass Close {
+   Name "Close"
+   Pos 175 300
+   Size 24 24
+   Flags 0
+  }
+  ImageSetDefClass ladderdown {
+   Name "ladderdown"
+   Pos 125 825
+   Size 45 55
+   Flags 0
+  }
+  ImageSetDefClass ladderup {
+   Name "ladderup"
+   Pos 225 825
+   Size 45 55
+   Flags 0
+  }
+  ImageSetDefClass ladderoff {
+   Name "ladderoff"
+   Pos 175 825
+   Size 45 55
+   Flags 0
+  }
+  ImageSetDefClass open_car {
+   Name "open_car"
+   Pos 321 825
+   Size 41 45
+   Flags 0
+  }
+  ImageSetDefClass close_car {
+   Name "close_car"
+   Pos 270 825
+   Size 50 39
+   Flags 0
+  }
+  ImageSetDefClass open_hood {
+   Name "open_hood"
+   Pos 420 825
+   Size 46 37
+   Flags 0
+  }
+  ImageSetDefClass close_hood {
+   Name "close_hood"
+   Pos 370 825
+   Size 46 21
+   Flags 0
+  }
+  ImageSetDefClass getout {
+   Name "getout"
+   Pos 470 825
+   Size 22 28
+   Flags 0
+  }
+  ImageSetDefClass get_in_cargo {
+   Name "get_in_cargo"
+   Pos 595 825
+   Size 22 21
+   Flags 0
+  }
+  ImageSetDefClass get_in_commander {
+   Name "get_in_commander"
+   Pos 620 825
+   Size 32 32
+   Flags 0
+  }
+  ImageSetDefClass get_in_driver {
+   Name "get_in_driver"
+   Pos 670 825
+   Size 24 24
+   Flags 0
+  }
+  ImageSetDefClass get_in_gunner {
+   Name "get_in_gunner"
+   Pos 695 825
+   Size 32 32
+   Flags 0
+  }
+  ImageSetDefClass get_in_pilot {
+   Name "get_in_pilot"
+   Pos 745 825
+   Size 32 32
+   Flags 0
+  }
+  ImageSetDefClass engine_on {
+   Name "engine_on"
+   Pos 545 825
+   Size 37 42
+   Flags 0
+  }
+  ImageSetDefClass engine_off {
+   Name "engine_off"
+   Pos 495 825
+   Size 37 42
+   Flags 0
+  }
+  ImageSetDefClass ActionMenuSelectCenter {
+   Name "ActionMenuSelectCenter"
+   Pos 79 265
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass container_header {
+   Name "container_header"
+   Pos 486 982
+   Size 537 42
+   Flags 0
+  }
+  ImageSetDefClass circle {
+   Name "circle"
+   Pos 77 278
+   Size 36 36
+   Flags 3
+  }
+  ImageSetDefClass quantity_full {
+   Name "quantity_full"
+   Pos 0 356
+   Size 25 5
+   Flags 0
+  }
+  ImageSetDefClass quantity_empty {
+   Name "quantity_empty"
+   Pos 25 356
+   Size 25 5
+   Flags 0
+  }
+  ImageSetDefClass InventoryGridEmpty_ {
+   Name "InventoryGridEmpty_"
+   Pos 399 296
+   Size 59 59
+   Flags 0
+  }
+  ImageSetDefClass icon_expand {
+   Name "icon_expand"
+   Pos 779 265
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_collapse {
+   Name "icon_collapse"
+   Pos 717 286
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_favourite_on {
+   Name "icon_favourite_on"
+   Pos 758 286
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_favourite_off {
+   Name "icon_favourite_off"
+   Pos 738 286
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_copy {
+   Name "icon_copy"
+   Pos 858 265
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_locked_sb {
+   Name "icon_locked_sb"
+   Pos 779 286
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_moon {
+   Name "icon_moon"
+   Pos 758 265
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_sun {
+   Name "icon_sun"
+   Pos 717 265
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_player {
+   Name "icon_player"
+   Pos 738 265
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass area_0 {
+   Name "area_0"
+   Pos 151 257
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass area_1 {
+   Name "area_1"
+   Pos 153 257
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass area_2 {
+   Name "area_2"
+   Pos 155 257
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass area_7 {
+   Name "area_7"
+   Pos 165 257
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass icon_sun_accel {
+   Name "icon_sun_accel"
+   Pos 696 265
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_moon_accel {
+   Name "icon_moon_accel"
+   Pos 696 286
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_refresh {
+   Name "icon_refresh"
+   Pos 670 616
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass mic {
+   Name "mic"
+   Pos 796 823
+   Size 36 36
+   Flags 0
+  }
+  ImageSetDefClass left_mouse {
+   Name "left_mouse"
+   Pos 638 461
+   Size 38 38
+   Flags 3
+  }
+  ImageSetDefClass right_mouse {
+   Name "right_mouse"
+   Pos 716 461
+   Size 38 38
+   Flags 3
+  }
+  ImageSetDefClass continuous_action_mouse {
+   Name "continuous_action_mouse"
+   Pos 781 438
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass continuous_action_mouse_half {
+   Name "continuous_action_mouse_half"
+   Pos 852 438
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass cursor {
+   Name "cursor"
+   Pos 682 884
+   Size 46 38
+   Flags 0
+  }
+  ImageSetDefClass walkie_talkie {
+   Name "walkie_talkie"
+   Pos 508 882
+   Size 34 40
+   Flags 0
+  }
+  ImageSetDefClass middle_mouse {
+   Name "middle_mouse"
+   Pos 677 461
+   Size 38 38
+   Flags 3
+  }
+  ImageSetDefClass key_icon {
+   Name "key_icon"
+   Pos 482 291
+   Size 48 48
+   Flags 0
+  }
+  ImageSetDefClass icon_hammer {
+   Name "icon_hammer"
+   Pos 678 506
+   Size 38 38
+   Flags 3
+  }
+  ImageSetDefClass icon_needle {
+   Name "icon_needle"
+   Pos 639 506
+   Size 38 38
+   Flags 3
+  }
+  ImageSetDefClass icon_arrow {
+   Name "icon_arrow"
+   Pos 744 624
+   Size 48 48
+   Flags 0
+  }
+  ImageSetDefClass icon_bar_specialisation {
+   Name "icon_bar_specialisation"
+   Pos 486 956
+   Size 180 8
+   Flags 0
+  }
+  ImageSetDefClass icon_engine_alert {
+   Name "icon_engine_alert"
+   Pos 397 519
+   Size 38 38
+   Flags 3
+  }
+  ImageSetDefClass continuous_action_mouse_part {
+   Name "continuous_action_mouse_part"
+   Pos 923 438
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass icon_bullet {
+   Name "icon_bullet"
+   Pos 522 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_close {
+   Name "icon_close"
+   Pos 628 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_open {
+   Name "icon_open"
+   Pos 593 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_lock {
+   Name "icon_lock"
+   Pos 663 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_out_of_reach {
+   Name "icon_out_of_reach"
+   Pos 542 297
+   Size 67 65
+   Flags 0
+  }
+  ImageSetDefClass icon_plus {
+   Name "icon_plus"
+   Pos 383 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_minus {
+   Name "icon_minus"
+   Pos 418 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_pin {
+   Name "icon_pin"
+   Pos 557 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_circle {
+   Name "icon_circle"
+   Pos 488 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass icon_x {
+   Name "icon_x"
+   Pos 453 261
+   Size 29 29
+   Flags 0
+  }
+  ImageSetDefClass DayZLogo {
+   Name "DayZLogo"
+   Pos 0 0
+   Size 444 208
+   Flags 0
+  }
+  ImageSetDefClass alpha_0 {
+   Name "alpha_0"
+   Pos 0 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_16 {
+   Name "alpha_16"
+   Pos 63 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_32 {
+   Name "alpha_32"
+   Pos 127 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_48 {
+   Name "alpha_48"
+   Pos 191 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_64 {
+   Name "alpha_64"
+   Pos 255 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_80 {
+   Name "alpha_80"
+   Pos 319 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_96 {
+   Name "alpha_96"
+   Pos 383 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_112 {
+   Name "alpha_112"
+   Pos 447 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_128 {
+   Name "alpha_128"
+   Pos 511 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_144 {
+   Name "alpha_144"
+   Pos 575 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_160 {
+   Name "alpha_160"
+   Pos 639 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_176 {
+   Name "alpha_176"
+   Pos 705 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_192 {
+   Name "alpha_192"
+   Pos 767 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_208 {
+   Name "alpha_208"
+   Pos 831 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_224 {
+   Name "alpha_224"
+   Pos 895 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_240 {
+   Name "alpha_240"
+   Pos 959 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass alpha_256 {
+   Name "alpha_256"
+   Pos 1023 249
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass area_focus2 {
+   Name "area_focus2"
+   Pos 159 257
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass area_focus3 {
+   Name "area_focus3"
+   Pos 161 257
+   Size 1 1
+   Flags 0
+  }
+  ImageSetDefClass red {
+   Name "red"
+   Pos 151 260
+   Size 2 2
+   Flags 0
+  }
+  ImageSetDefClass mod_more {
+   Name "mod_more"
+   Pos 597 29
+   Size 60 60
+   Flags 0
+  }
+  ImageSetDefClass reserved {
+   Name "reserved"
+   Pos 691 323
+   Size 10 10
+   Flags 3
+  }
+  ImageSetDefClass tutorials {
+   Name "tutorials"
+   Pos 557 41
+   Size 37 37
+   Flags 0
+  }
+  ImageSetDefClass middle_mouse_up {
+   Name "middle_mouse_up"
+   Pos 638 427
+   Size 38 38
+   Flags 0
+  }
+  ImageSetDefClass middle_mouse_down {
+   Name "middle_mouse_down"
+   Pos 677 427
+   Size 38 38
+   Flags 0
+  }
+  ImageSetDefClass shift {
+   Name "shift"
+   Pos 712 310
+   Size 73 38
+   Flags 0
+  }
+  ImageSetDefClass icon_modded_sb {
+   Name "icon_modded_sb"
+   Pos 799 286
+   Size 20 20
+   Flags 0
+  }
+  ImageSetDefClass icon_mouseandkeyboard_sb {
+   Name "icon_mouseandkeyboard_sb"
+   Pos 819 286
+   Size 47 20
+   Flags 0
+  }
+  ImageSetDefClass icon_flag {
+   Name "icon_flag"
+   Pos 174 272
+   Size 26 26
+   Flags 0
+  }
+  ImageSetDefClass iconHeatBuffer {
+   Name "iconHeatBuffer"
+   Pos 736 120
+   Size 14 14
+   Flags 0
+  }
+  ImageSetDefClass conPing {
+   Name "conPing"
+   Pos 0 375
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass conServer {
+   Name "conServer"
+   Pos 65 375
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass conLost {
+   Name "conLost"
+   Pos 130 375
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass red_half {
+   Name "red_half"
+   Pos 151 260
+   Size 1 2
+   Flags 0
+  }
+  ImageSetDefClass icon_XboxButton {
+   Name "icon_XboxButton"
+   Pos 0 439
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass icon_PSButton {
+   Name "icon_PSButton"
+   Pos 65 439
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass icon_Keyboard {
+   Name "icon_Keyboard"
+   Pos 130 439
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass icon_Mouse {
+   Name "icon_Mouse"
+   Pos 260 439
+   Size 64 64
+   Flags 0
+  }
+  ImageSetDefClass icon_Gamepad {
+   Name "icon_Gamepad"
+   Pos 195 439
+   Size 64 64
+   Flags 0
+  }
+ }
+ Groups {
+  ImageSetGroupClass UI {
+   Name "UI"
+   Images {
+    ImageSetDefClass iconHealth0 {
+     Name "iconHealth0"
+     Pos 980 199
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconBlood0 {
+     Name "iconBlood0"
+     Pos 941 199
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHungry0 {
+     Name "iconHungry0"
+     Pos 861 199
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconTemperature0 {
+     Name "iconTemperature0"
+     Pos 824 199
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconThirsty0 {
+     Name "iconThirsty0"
+     Pos 902 199
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHealth1 {
+     Name "iconHealth1"
+     Pos 980 159
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconBlood1 {
+     Name "iconBlood1"
+     Pos 941 159
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHungry1 {
+     Name "iconHungry1"
+     Pos 861 159
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconTemperature1 {
+     Name "iconTemperature1"
+     Pos 824 159
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconThirsty1 {
+     Name "iconThirsty1"
+     Pos 902 159
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHealth2 {
+     Name "iconHealth2"
+     Pos 980 119
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconBlood2 {
+     Name "iconBlood2"
+     Pos 941 119
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHungry2 {
+     Name "iconHungry2"
+     Pos 861 119
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconTemperature2 {
+     Name "iconTemperature2"
+     Pos 824 119
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconThirsty2 {
+     Name "iconThirsty2"
+     Pos 902 119
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHealth3 {
+     Name "iconHealth3"
+     Pos 980 79
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconBlood3 {
+     Name "iconBlood3"
+     Pos 941 79
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHungry3 {
+     Name "iconHungry3"
+     Pos 861 79
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconTemperature3 {
+     Name "iconTemperature3"
+     Pos 824 79
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconThirsty3 {
+     Name "iconThirsty3"
+     Pos 902 79
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHealth4 {
+     Name "iconHealth4"
+     Pos 980 39
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconBlood4 {
+     Name "iconBlood4"
+     Pos 941 39
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconHungry4 {
+     Name "iconHungry4"
+     Pos 861 39
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconTemperature4 {
+     Name "iconTemperature4"
+     Pos 824 39
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconThirsty4 {
+     Name "iconThirsty4"
+     Pos 902 39
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconArrowUp1 {
+     Name "iconArrowUp1"
+     Pos 836 351
+     Size 22 9
+     Flags 3
+    }
+    ImageSetDefClass iconStomach0 {
+     Name "iconStomach0"
+     Pos 655 122
+     Size 52 38
+     Flags 3
+    }
+    ImageSetDefClass iconDrops {
+     Name "iconDrops"
+     Pos 746 199
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconPill {
+     Name "iconPill"
+     Pos 607 161
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconSkull {
+     Name "iconSkull"
+     Pos 573 200
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconBone {
+     Name "iconBone"
+     Pos 708 161
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass stance_walk {
+     Name "stance_walk"
+     Pos 825 375
+     Size 50 50
+     Flags 0
+    }
+    ImageSetDefClass Presence4 {
+     Name "Presence4"
+     Pos 525 373
+     Size 16 53
+     Flags 0
+    }
+    ImageSetDefClass Presence3 {
+     Name "Presence3"
+     Pos 541 373
+     Size 16 53
+     Flags 0
+    }
+    ImageSetDefClass Presence2 {
+     Name "Presence2"
+     Pos 557 373
+     Size 16 53
+     Flags 0
+    }
+    ImageSetDefClass Presence1 {
+     Name "Presence1"
+     Pos 573 373
+     Size 16 53
+     Flags 0
+    }
+    ImageSetDefClass Presence0 {
+     Name "Presence0"
+     Pos 589 373
+     Size 16 53
+     Flags 0
+    }
+    ImageSetDefClass progress_empty {
+     Name "progress_empty"
+     Pos 25 350
+     Size 25 5
+     Flags 0
+    }
+    ImageSetDefClass progress_full {
+     Name "progress_full"
+     Pos 0 350
+     Size 25 5
+     Flags 0
+    }
+    ImageSetDefClass fuel {
+     Name "fuel"
+     Pos 446 480
+     Size 38 38
+     Flags 0
+    }
+    ImageSetDefClass oil {
+     Name "oil"
+     Pos 441 519
+     Size 50 38
+     Flags 0
+    }
+    ImageSetDefClass handBrake {
+     Name "handBrake"
+     Pos 500 486
+     Size 40 34
+     Flags 0
+    }
+    ImageSetDefClass blokedWheel {
+     Name "blokedWheel"
+     Pos 499 522
+     Size 44 33
+     Flags 0
+    }
+    ImageSetDefClass liquid {
+     Name "liquid"
+     Pos 397 441
+     Size 38 38
+     Flags 0
+    }
+    ImageSetDefClass battery {
+     Name "battery"
+     Pos 397 480
+     Size 38 38
+     Flags 0
+    }
+    ImageSetDefClass stance_car {
+     Name "stance_car"
+     Pos 675 375
+     Size 50 50
+     Flags 0
+    }
+    ImageSetDefClass large_pointer {
+     Name "large_pointer"
+     Pos 610 492
+     Size 18 111
+     Flags 0
+    }
+    ImageSetDefClass grid {
+     Name "grid"
+     Pos 125 300
+     Size 23 23
+     Flags 0
+    }
+    ImageSetDefClass list {
+     Name "list"
+     Pos 150 300
+     Size 23 23
+     Flags 0
+    }
+    ImageSetDefClass emptyHands {
+     Name "emptyHands"
+     Pos 203 275
+     Size 173 88
+     Flags 0
+    }
+    ImageSetDefClass stance_crouch {
+     Name "stance_crouch"
+     Pos 725 375
+     Size 50 50
+     Flags 0
+    }
+    ImageSetDefClass stance_prone {
+     Name "stance_prone"
+     Pos 775 375
+     Size 50 50
+     Flags 0
+    }
+    ImageSetDefClass iconBacteria {
+     Name "iconBacteria"
+     Pos 785 199
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconStomach1 {
+     Name "iconStomach1"
+     Pos 655 161
+     Size 52 38
+     Flags 3
+    }
+    ImageSetDefClass iconStomach2 {
+     Name "iconStomach2"
+     Pos 655 200
+     Size 52 38
+     Flags 3
+    }
+    ImageSetDefClass iconShock {
+     Name "iconShock"
+     Pos 534 200
+     Size 38 38
+     Flags 3
+    }
+    ImageSetDefClass iconBleeding {
+     Name "iconBleeding"
+     Pos 529 152
+     Size 44 44
+     Flags 3
+    }
+    ImageSetDefClass iconArrowUp2 {
+     Name "iconArrowUp2"
+     Pos 798 351
+     Size 22 14
+     Flags 3
+    }
+    ImageSetDefClass iconArrowUp3 {
+     Name "iconArrowUp3"
+     Pos 760 351
+     Size 22 19
+     Flags 3
+    }
+    ImageSetDefClass iconBlood0 {
+     Name "iconBlood0"
+     Pos 803 158
+     Size 20 10
+     Flags 3
+    }
+    ImageSetDefClass iconBloodA {
+     Name "iconBloodA"
+     Pos 803 143
+     Size 20 10
+     Flags 3
+    }
+    ImageSetDefClass iconBloodB {
+     Name "iconBloodB"
+     Pos 803 113
+     Size 20 10
+     Flags 3
+    }
+    ImageSetDefClass iconBloodAB {
+     Name "iconBloodAB"
+     Pos 803 128
+     Size 20 10
+     Flags 3
+    }
+    ImageSetDefClass specialization_arrow {
+     Name "specialization_arrow"
+     Pos 723 516
+     Size 17 11
+     Flags 3
+    }
+    ImageSetDefClass small_pointer {
+     Name "small_pointer"
+     Pos 583 500
+     Size 13 40
+     Flags 0
+    }
+    ImageSetDefClass iconArrowUp {
+     Name "iconArrowUp"
+     Pos 730 499
+     Size 22 14
+     Flags 0
+    }
+    ImageSetDefClass inv_header_1 {
+     Name "inv_header_1"
+     Pos 81 610
+     Size 521 48
+     Flags 0
+    }
+    ImageSetDefClass inv_header_2 {
+     Name "inv_header_2"
+     Pos 81 662
+     Size 521 48
+     Flags 0
+    }
+    ImageSetDefClass inv_header_3 {
+     Name "inv_header_3"
+     Pos 81 714
+     Size 521 48
+     Flags 0
+    }
+    ImageSetDefClass exit {
+     Name "exit"
+     Pos 776 41
+     Size 37 37
+     Flags 0
+    }
+    ImageSetDefClass settings {
+     Name "settings"
+     Pos 726 41
+     Size 37 37
+     Flags 0
+    }
+    ImageSetDefClass credits {
+     Name "credits"
+     Pos 667 43
+     Size 45 33
+     Flags 0
+    }
+    ImageSetDefClass inv_panel_bg {
+     Name "inv_panel_bg"
+     Pos 26 661
+     Size 41 152
+     Flags 0
+    }
+    ImageSetDefClass iconPoisoned {
+     Name "iconPoisoned"
+     Pos 612 200
+     Size 38 38
+     Flags 0
+    }
+    ImageSetDefClass stance_stand {
+     Name "stance_stand"
+     Pos 625 375
+     Size 50 50
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass Actions {
+   Name "Actions"
+   Images {
+    ImageSetDefClass open {
+     Name "open"
+     Pos 1 915
+     Size 71 108
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass menuButton {
+   Name "menuButton"
+   Images {
+    ImageSetDefClass menuButtonLeftTop {
+     Name "menuButtonLeftTop"
+     Pos 77 269
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass menuButtonLeft {
+     Name "menuButtonLeft"
+     Pos 77 271
+     Size 2 1
+     Flags 0
+    }
+    ImageSetDefClass menuButtonLeftBottom {
+     Name "menuButtonLeftBottom"
+     Pos 77 272
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass menuButtonTop {
+     Name "menuButtonTop"
+     Pos 79 269
+     Size 1 2
+     Flags 0
+    }
+    ImageSetDefClass menuButtonCenter {
+     Name "menuButtonCenter"
+     Pos 79 271
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass menuButtonBottom {
+     Name "menuButtonBottom"
+     Pos 79 272
+     Size 1 2
+     Flags 0
+    }
+    ImageSetDefClass menuButtonRightTop {
+     Name "menuButtonRightTop"
+     Pos 80 269
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass menuButtonRight {
+     Name "menuButtonRight"
+     Pos 80 271
+     Size 2 1
+     Flags 0
+    }
+    ImageSetDefClass menuButtonRightBottom {
+     Name "menuButtonRightBottom"
+     Pos 80 272
+     Size 2 2
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass InventoryGridEmpty {
+   Name "InventoryGridEmpty"
+   Images {
+    ImageSetDefClass InventoryGridEmptyLeftTop {
+     Name "InventoryGridEmptyLeftTop"
+     Pos 399 296
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyLeft {
+     Name "InventoryGridEmptyLeft"
+     Pos 399 323
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyLeftBottom {
+     Name "InventoryGridEmptyLeftBottom"
+     Pos 399 345
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyTop {
+     Name "InventoryGridEmptyTop"
+     Pos 424 296
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyCenter {
+     Name "InventoryGridEmptyCenter"
+     Pos 423 322
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyBottom {
+     Name "InventoryGridEmptyBottom"
+     Pos 423 345
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyRightTop {
+     Name "InventoryGridEmptyRightTop"
+     Pos 448 296
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyRight {
+     Name "InventoryGridEmptyRight"
+     Pos 448 322
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass InventoryGridEmptyRightBottom {
+     Name "InventoryGridEmptyRightBottom"
+     Pos 448 345
+     Size 10 10
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass EditorPanel {
+   Name "EditorPanel"
+   Images {
+    ImageSetDefClass EditorPanelLeftTop {
+     Name "EditorPanelLeftTop"
+     Pos 71 257
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelLeft {
+     Name "EditorPanelLeft"
+     Pos 71 259
+     Size 2 1
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelLeftBottom {
+     Name "EditorPanelLeftBottom"
+     Pos 71 260
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelTop {
+     Name "EditorPanelTop"
+     Pos 73 257
+     Size 1 2
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelCenter {
+     Name "EditorPanelCenter"
+     Pos 73 259
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelBottom {
+     Name "EditorPanelBottom"
+     Pos 73 260
+     Size 1 2
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelRightTop {
+     Name "EditorPanelRightTop"
+     Pos 74 257
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelRight {
+     Name "EditorPanelRight"
+     Pos 74 259
+     Size 2 1
+     Flags 0
+    }
+    ImageSetDefClass EditorPanelRightBottom {
+     Name "EditorPanelRightBottom"
+     Pos 74 260
+     Size 2 2
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass dashed {
+   Name "dashed"
+   Images {
+    ImageSetDefClass dashedLeftTop {
+     Name "dashedLeftTop"
+     Pos 66 269
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass dashedLeft {
+     Name "dashedLeft"
+     Pos 66 271
+     Size 2 6
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass dashedLeftBottom {
+     Name "dashedLeftBottom"
+     Pos 66 277
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass dashedTop {
+     Name "dashedTop"
+     Pos 68 269
+     Size 6 2
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass dashedCenter {
+     Name "dashedCenter"
+     Pos 70 273
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass dashedBottom {
+     Name "dashedBottom"
+     Pos 68 277
+     Size 6 2
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass dashedRightTop {
+     Name "dashedRightTop"
+     Pos 74 269
+     Size 2 2
+     Flags 0
+    }
+    ImageSetDefClass dashedRight {
+     Name "dashedRight"
+     Pos 74 271
+     Size 2 6
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass dashedRightBottom {
+     Name "dashedRightBottom"
+     Pos 74 277
+     Size 2 2
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass RadialMenu {
+   Name "RadialMenu"
+   Images {
+    ImageSetDefClass radial_selector {
+     Name "radial_selector"
+     Pos 520 438
+     Size 100 32
+     Flags 0
+    }
+    ImageSetDefClass radial_delimiter {
+     Name "radial_delimiter"
+     Pos 0 324
+     Size 75 5
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass MainMenu {
+   Name "MainMenu"
+   Images {
+    ImageSetDefClass icon_feedback {
+     Name "icon_feedback"
+     Pos 58 333
+     Size 35 35
+     Flags 0
+    }
+    ImageSetDefClass icon_forums {
+     Name "icon_forums"
+     Pos 95 333
+     Size 35 35
+     Flags 0
+    }
+    ImageSetDefClass icon_twitter {
+     Name "icon_twitter"
+     Pos 130 333
+     Size 35 35
+     Flags 0
+    }
+    ImageSetDefClass icon_youtube {
+     Name "icon_youtube"
+     Pos 165 333
+     Size 35 35
+     Flags 0
+    }
+    ImageSetDefClass arrow_left {
+     Name "arrow_left"
+     Pos 614 289
+     Size 28 44
+     Flags 0
+    }
+    ImageSetDefClass arrow_right {
+     Name "arrow_right"
+     Pos 643 289
+     Size 28 44
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass DayZDefaultPanel {
+   Name "DayZDefaultPanel"
+   Images {
+    ImageSetDefClass DayZDefaultPanelLeft {
+     Name "DayZDefaultPanelLeft"
+     Pos 1016 464
+     Size 4 512
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass DayZDefaultPanelRight {
+     Name "DayZDefaultPanelRight"
+     Pos 1020 464
+     Size 4 512
+     Flags ISVerticalTile
+    }
+    ImageSetDefClass DayZDefaultPanelTop {
+     Name "DayZDefaultPanelTop"
+     Pos 500 968
+     Size 512 4
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass DayZDefaultPanelBottom {
+     Name "DayZDefaultPanelBottom"
+     Pos 500 972
+     Size 512 4
+     Flags ISHorizontalTile
+    }
+    ImageSetDefClass DayZDefaultPanelCorner {
+     Name "DayZDefaultPanelCorner"
+     Pos 503 971
+     Size 1 1
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass DefaultButton {
+   Name "DefaultButton"
+   Images {
+    ImageSetDefClass DefaultButtonSelected {
+     Name "DefaultButtonSelected"
+     Pos 76 277
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass DefaultButtonPressed {
+     Name "DefaultButtonPressed"
+     Pos 74 277
+     Size 1 1
+     Flags 0
+    }
+    ImageSetDefClass DefaultButtonHovered {
+     Name "DefaultButtonHovered"
+     Pos 75 279
+     Size 1 1
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass UIPanelHorizontal {
+   Name "UIPanelHorizontal"
+   Images {
+    ImageSetDefClass UIPanelHorizontalLeft {
+     Name "UIPanelHorizontalLeft"
+     Pos 26 609
+     Size 5 48
+     Flags 0
+    }
+    ImageSetDefClass UIPanelHorizontalTop {
+     Name "UIPanelHorizontalTop"
+     Pos 31 609
+     Size 30 6
+     Flags 0
+    }
+    ImageSetDefClass UIPanelHorizontalCenter {
+     Name "UIPanelHorizontalCenter"
+     Pos 43 630
+     Size 5 6
+     Flags 0
+    }
+    ImageSetDefClass UIPanelHorizontalBottom {
+     Name "UIPanelHorizontalBottom"
+     Pos 31 651
+     Size 30 6
+     Flags 0
+    }
+    ImageSetDefClass UIPanelHorizontalRight {
+     Name "UIPanelHorizontalRight"
+     Pos 61 609
+     Size 5 48
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass InventoryButton {
+   Name "InventoryButton"
+   Images {
+    ImageSetDefClass InventoryButtonLeft {
+     Name "InventoryButtonLeft"
+     Pos 26 668
+     Size 7 138
+     Flags 0
+    }
+    ImageSetDefClass InventoryButtonTop {
+     Name "InventoryButtonTop"
+     Pos 26 661
+     Size 41 7
+     Flags 0
+    }
+    ImageSetDefClass InventoryButtonCenter {
+     Name "InventoryButtonCenter"
+     Pos 40 731
+     Size 13 13
+     Flags 0
+    }
+    ImageSetDefClass InventoryButtonBottom {
+     Name "InventoryButtonBottom"
+     Pos 26 806
+     Size 41 7
+     Flags 0
+    }
+    ImageSetDefClass InventoryButtonRight {
+     Name "InventoryButtonRight"
+     Pos 60 668
+     Size 7 138
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass Notifications {
+   Name "Notifications"
+   Images {
+    ImageSetDefClass notification_friend {
+     Name "notification_friend"
+     Pos 834 823
+     Size 36 36
+     Flags 0
+    }
+   }
+  }
+  ImageSetGroupClass InventoryIcons {
+   Name "InventoryIcons"
+   Images {
+    ImageSetDefClass scope {
+     Name "scope"
+     Pos 802 265
+     Size 20 20
+     Flags 0
+    }
+    ImageSetDefClass ironsight {
+     Name "ironsight"
+     Pos 822 265
+     Size 20 20
+     Flags 0
+    }
+    ImageSetDefClass tracer {
+     Name "tracer"
+     Pos 845 265
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass armor_piercing {
+     Name "armor_piercing"
+     Pos 845 275
+     Size 10 10
+     Flags 0
+    }
+    ImageSetDefClass cartridge_fp {
+     Name "cartridge_fp"
+     Pos 950 258
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass cartridge_pistol {
+     Name "cartridge_pistol"
+     Pos 968 258
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass cartridge_int {
+     Name "cartridge_int"
+     Pos 986 258
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass cartridge_shell {
+     Name "cartridge_shell"
+     Pos 1004 258
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass shell_fp {
+     Name "shell_fp"
+     Pos 950 293
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass shell_pistol {
+     Name "shell_pistol"
+     Pos 968 293
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass shell_int {
+     Name "shell_int"
+     Pos 986 293
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass shell_shell {
+     Name "shell_shell"
+     Pos 1004 293
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass jam_fp {
+     Name "jam_fp"
+     Pos 950 328
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass jam_pistol {
+     Name "jam_pistol"
+     Pos 968 328
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass jam_int {
+     Name "jam_int"
+     Pos 986 328
+     Size 17 35
+     Flags 0
+    }
+    ImageSetDefClass jam_shell {
+     Name "jam_shell"
+     Pos 1004 328
+     Size 17 35
+     Flags 0
+    }
+   }
+  }
+ }
+}

@@ -23,7 +23,6 @@ modded class PCOHandlerStats {
 	{
 		RegisterPCO(new PlayerStatsPCO_PNSMod);
 		//GetPNSLogger().WriteDebug("Registered Player Stats" + PlayerStatsPCO_PNSMOD);
-		
 	}
 };
 	enum EPlayerStats_PNSMod
@@ -36,9 +35,9 @@ class PlayerStatsPCO_PNSMod extends PlayerStatsPCO_Base {
 
 	override void Init()
 	{	
-		RegisterStat(	EPlayerStats_PNSMod.BLADDER, 		new PlayerStat<float> 	(0,5000,500,"Urine", EPSstatsFlags.EMPTY)	);
-		Print("[PNS - PlayerStats] :: STAT: " + EPlayerStats_PNSMod.BLADDER + " Registered");
-		RegisterStat(	EPlayerStats_PNSMod.BOWEL, 			new PlayerStat<float>  	(0,5000,500,"Poop" , EPSstatsFlags.EMPTY)	);
-		Print("[PNS - PlayerStats] :: STAT: " + EPlayerStats_PNSMod.BOWEL   + " Registered");
+		RegisterStat(	EPlayerStats_PNSMod.BLADDER, 		new PlayerStat<float> 	(0,5000,500,"Bladder", EPSstatsFlags.EMPTY)	);
+		Print("[PNS - PlayerStats] :: STAT: Bladder," + EPlayerStats_PNSMod.BLADDER + " Registered");
+		RegisterStat(	EPlayerStats_PNSMod.BOWEL, 			new PlayerStat<float>  	(0,5000,500,"Bowel" , EPSstatsFlags.EMPTY)	);
+		Print("[PNS - PlayerStats] :: STAT: Bowel," + EPlayerStats_PNSMod.BOWEL   + " Registered");
 	}
 }

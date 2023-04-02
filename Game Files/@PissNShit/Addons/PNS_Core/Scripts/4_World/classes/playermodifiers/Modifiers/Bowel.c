@@ -40,7 +40,7 @@ class BowelMdfr: ModifierBase
 		float bowel = player.GetStatBowel().Get();
 		float metabolic_speed = MiscGameplayFunctions.GetBowelMetabolicSpeed(m_MovementState.m_iMovement);
 		
-		float modifier = bowel/PlayerConstants.SL_BOWEL_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
+		float modifier = bowel*PlayerConstants.SL_BOWEL_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
 		metabolic_speed *= modifier; //non linear shaping for consumption curve (comment out to have it linear)
 		
 		player.GetStatBowel().Add( (-metabolic_speed * deltaT) );

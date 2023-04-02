@@ -14,7 +14,6 @@
  * Updates: 
  * 06/03/2022 - Initial Code Development
  */
-
 modded class MissionServer {
 	
 	ref PNSConfig pnsConfig;
@@ -39,6 +38,10 @@ modded class MissionServer {
 			Print("[PNS - ConfigManager] :: File " + pnsConfig + " Found!, Loading Configs");
             SavePNSConfig();
         }
+		
+		if (GetGame().IsServer()) {
+			GetRPCManager().AddRPC( "RPCPlayerSats", "SyncPlayersRequest", this, SingeplayerExecutionType.Server );		
+		}			
     }
 	
 	override void OnMissionStart() {
@@ -60,6 +63,42 @@ modded class MissionServer {
 		GetGame().RPCSingleParam(player, PNSRPC.RPC_CLIENT_SETCONFIG, configParams, true, identity);
 		Print("[PNS - ConfigManager] :: Parameter: " + configParams + " Found");
     }
+	
+	void SyncPlayersRequest( CallType type, ref ParamsReadContext ctx, ref PlayerIdentity sender, ref Object target ) {
+		ref TFloatArray PlayerValues		= new TFloatArray;
+		array<Man> players 				= new array<Man>;
+		PlayerBase player;
+		PlayerIdentity PlayerIdentity_;
+       
+		if ( type == CallType.Server && GetGame().IsServer() ) {
+			GetGame().GetPlayers(players);
+			for (int i = 0; i < players.Count(); ++i) {
+				player = PlayerBase.Cast(players.Get(i));
+				PlayerIdentity_ = player.GetIdentity();
+				
+				if (PlayerIdentity_.GetPlayerId() == sender.GetPlayerId())
+				{
+
+					/*
+					 * Params for PNS Mod - Still need added to Array
+					 */
+					PlayerValues.Insert(player.GetStatBowel().Get());
+					PlayerValues.Insert(player.GetStatBladder().Get());
+					PlayerValues.Insert(player.GetStatWater().Get());
+					PlayerValues.Insert(player.GetStatEnergy().Get());
+					PlayerValues.Insert(player.IsAlive());
+					PlayerValues.Insert(player.m_DiseaseCount);
+					PlayerValues.Insert(player.m_Environment.GetTemperature());	
+					PlayerValues.Insert(player.GetHealth("","Health"));
+					PlayerValues.Insert(player.GetHealth("","Blood"));
+				}
+			}
+			GetRPCManager().SendRPC( "RPCPlayerSats", "SyncPlayers", new Param1<ref TFloatArray> (PlayerValues), true, sender );
+			Print("[PNS - PlayerValue DEBUG] :: Player: " + player + " Stats: " + "Health, Blood, Bowel, Bladder, WaterLevel, EnergyLevel, IsAlive, DiseaseCount, EnvironmentTemp");
+			Print("[PNS - PlayerValue DEBUG] :: Player: " + player + " Stats: " + PlayerValues);
+		}
+	}	
+	
 	
 	private void SavePNSConfig() {
         JsonFileLoader<PNSConfig>.JsonSaveFile(configDir, pnsConfig);

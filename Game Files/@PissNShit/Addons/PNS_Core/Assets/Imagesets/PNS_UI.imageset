@@ -1,10 +1,10 @@
 ImageSetClass {
- Name "PNS_UI_IS"
+ Name "PNS_UI"
  RefSize 2048 2048
  Textures {
   ImageSetTextureClass {
    mpix 1
-   path "{5F5ABD751CA063D4}@PissNShit/Addons/PNS_Core/Assets/Images/ui/PNS_UI.edds"
+   path "{F039602ED03F7F4F}PNS_Core/Assets/Images/ui/PNS_UI.edds"
   }
  }
  Images {
@@ -14,56 +14,56 @@ ImageSetClass {
    Size 304 304
    Flags 0
   }
-  ImageSetDefClass icoBladder3 {
-   Name "icoBladder3"
+  ImageSetDefClass iconBladder3 {
+   Name "iconBladder3"
    Pos 489 800
    Size 305 304
    Flags 0
   }
-  ImageSetDefClass icoBladder2 {
-   Name "icoBladder2"
+  ImageSetDefClass iconBladder2 {
+   Name "iconBladder2"
    Pos 490 1112
    Size 302 304
    Flags 0
   }
-  ImageSetDefClass icoBladder1 {
-   Name "icoBladder1"
+  ImageSetDefClass iconBladder1 {
+   Name "iconBladder1"
    Pos 489 1425
    Size 302 302
    Flags 0
   }
-  ImageSetDefClass icoBladder0 {
-   Name "icoBladder0"
+  ImageSetDefClass iconBladder0 {
+   Name "iconBladder0"
    Pos 489 1737
    Size 302 302
    Flags 0
   }
-  ImageSetDefClass icoBowel4 {
-   Name "icoBowel4"
+  ImageSetDefClass iconBowel4 {
+   Name "iconBowel4"
    Pos 800 487
    Size 305 306
    Flags 0
   }
-  ImageSetDefClass icoBowel1 {
-   Name "icoBowel1"
+  ImageSetDefClass iconBowel1 {
+   Name "iconBowel1"
    Pos 801 1424
    Size 304 302
    Flags 0
   }
-  ImageSetDefClass icoBowel2 {
-   Name "icoBowel2"
+  ImageSetDefClass iconBowel2 {
+   Name "iconBowel2"
    Pos 799 1112
    Size 304 304
    Flags 0
   }
-  ImageSetDefClass icoBowel3 {
-   Name "icoBowel3"
+  ImageSetDefClass iconBowel3 {
+   Name "iconBowel3"
    Pos 801 799
    Size 304 304
    Flags 0
   }
-  ImageSetDefClass icoBowel0 {
-   Name "icoBowel0"
+  ImageSetDefClass iconBowel0 {
+   Name "iconBowel0"
    Pos 801 1736
    Size 303 303
    Flags 0
