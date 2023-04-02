@@ -4,68 +4,68 @@ ImageSetClass {
  Textures {
   ImageSetTextureClass {
    mpix 1
-   path "{F039602ED03F7F4F}PNS_Core/Assets/Images/ui/PNS_UI.edds"
+   path "PNS_Core/Assets/Images/ui/PNS_UI.edds"
   }
  }
  Images {
   ImageSetDefClass icoBladder4 {
    Name "icoBladder4"
-   Pos 488 488
-   Size 304 304
+   Pos 490 490
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBladder3 {
    Name "iconBladder3"
-   Pos 489 800
-   Size 305 304
+   Pos 490 802
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBladder2 {
    Name "iconBladder2"
-   Pos 490 1112
-   Size 302 304
+   Pos 490 1114
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBladder1 {
    Name "iconBladder1"
-   Pos 489 1425
-   Size 302 302
+   Pos 490 1427
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBladder0 {
    Name "iconBladder0"
-   Pos 489 1737
-   Size 302 302
+   Pos 490 1738
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBowel4 {
    Name "iconBowel4"
-   Pos 800 487
-   Size 305 306
+   Pos 802 489
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBowel1 {
    Name "iconBowel1"
-   Pos 801 1424
-   Size 304 302
+   Pos 802 1425
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBowel2 {
    Name "iconBowel2"
-   Pos 799 1112
-   Size 304 304
+   Pos 802 1113
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBowel3 {
    Name "iconBowel3"
-   Pos 801 799
-   Size 304 304
+   Pos 802 801
+   Size 300 300
    Flags 0
   }
   ImageSetDefClass iconBowel0 {
    Name "iconBowel0"
-   Pos 801 1736
-   Size 303 303
+   Pos 802 1737
+   Size 300 300
    Flags 0
   }
  }

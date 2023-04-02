@@ -15,7 +15,10 @@
  * 05/12/2022 - Initial Code Development
  */
 
-enum eModifiersPNS {
-	MDF_BLADDER = 54,
+enum eModifiersPNS
+{
+	MDF_BLADDER,
 	MDF_BOWEL,
+		// ---------------only count bellow
+	COUNT,
 }

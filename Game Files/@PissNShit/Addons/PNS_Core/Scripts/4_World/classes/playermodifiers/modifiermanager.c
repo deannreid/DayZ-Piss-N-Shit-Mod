@@ -19,6 +19,7 @@ modded class ModifiersManager {
 
 	override void Init () {
 	
+		
 		AddModifier (new BladderMdfr);
 		AddModifier  (new BowelMdfr);
 	

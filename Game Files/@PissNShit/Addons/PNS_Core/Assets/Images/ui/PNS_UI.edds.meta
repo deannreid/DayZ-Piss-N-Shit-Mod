@@ -1,16 +1,16 @@
 MetaFileClass {
- Name "PNS_Core/Assets/PNS_UI.edds"
- Author "Dean"
- ChangeDate -187421307
+ Name "{5F5ABD751CA063D4}@PissNShit/Addons/PNS_Core/Assets/Images/ui/PNS_UI.edds"
+ Author "desktop-23q3u52"
+ ChangeDate -1315705214
  Configurations {
-  PAAResourceClass PC {
-   SourceFile "PNS_UI.paa"
+  PNGResourceClass PC {
+   SourceFile "PNS_UI.png"
   }
-  PAAResourceClass XBOX_ONE : PC {
+  PNGResourceClass XBOX_ONE : PC {
   }
-  PAAResourceClass PS4 : PC {
+  PNGResourceClass PS4 : PC {
   }
-  PAAResourceClass LINUX : PC {
+  PNGResourceClass LINUX : PC {
   }
  }
 }
