@@ -1901,7 +1901,7 @@ FrameWidgetClass HudFrameWidget {
        vexactsize 1
        style rover_sim_colorable
       }
-      PanelWidgetClass Bladder1 {
+      PanelWidgetClass Bladder {
        clipchildren 1
        inheritalpha 0
        position 273.82397 -0.4843
@@ -1915,7 +1915,7 @@ FrameWidgetClass HudFrameWidget {
        fixaspect fixwidth
        style blank
        {
-        ImageWidgetClass IconBladder1 {
+        ImageWidgetClass IconBladder {
          color 0.8627 0.8627 0.8627 1
          position 0 0
          size 35 35
@@ -1937,7 +1937,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BladderArrowUp6 {
+        ImageWidgetClass BladderArrowUp3 {
          visible 1
          clipchildren 1
          color 0.8627 0.8627 0.8627 1
@@ -1959,7 +1959,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BladderArrowUp7 {
+        ImageWidgetClass BladderArrowUp2 {
          visible 0
          clipchildren 1
          inheritalpha 0
@@ -1982,7 +1982,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BladderArrowUp8 {
+        ImageWidgetClass BladderArrowUp1 {
          visible 0
          clipchildren 1
          inheritalpha 0
@@ -2005,7 +2005,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BladderArrowDown6 {
+        ImageWidgetClass BladderArrowDown1 {
          visible 0
          clipchildren 1
          color 0.8627 0.8627 0.8627 1
@@ -2027,7 +2027,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BladderArrowDown7 {
+        ImageWidgetClass BladderArrowDown2 {
          visible 0
          clipchildren 1
          inheritalpha 0
@@ -2050,7 +2050,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BladderArrowDown8 {
+        ImageWidgetClass BladderArrowDown3 {
          visible 1
          clipchildren 1
          inheritalpha 0
@@ -2075,7 +2075,7 @@ FrameWidgetClass HudFrameWidget {
         }
        }
       }
-      PanelWidgetClass Bowel1 {
+      PanelWidgetClass Bowel {
        clipchildren 1
        inheritalpha 0
        position 233.317 -0.4843
@@ -2089,7 +2089,7 @@ FrameWidgetClass HudFrameWidget {
        fixaspect fixwidth
        style blank
        {
-        ImageWidgetClass IconBowel1 {
+        ImageWidgetClass IconBowel {
          color 0.8627 0.8627 0.8627 1
          position 0 0
          size 35 35
@@ -2111,7 +2111,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BowelArrowUp6 {
+        ImageWidgetClass BowelArrowUp3 {
          visible 1
          clipchildren 1
          color 0.8627 0.8627 0.8627 1
@@ -2133,7 +2133,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BowelArrowUp7 {
+        ImageWidgetClass BowelArrowUp2 {
          visible 0
          clipchildren 1
          inheritalpha 0
@@ -2156,7 +2156,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BowelArrowUp8 {
+        ImageWidgetClass BowelArrowUp1 {
          visible 0
          clipchildren 1
          inheritalpha 0
@@ -2179,7 +2179,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BowelArrowDown6 {
+        ImageWidgetClass BowelArrowDown1 {
          visible 0
          clipchildren 1
          color 0.8627 0.8627 0.8627 1
@@ -2201,7 +2201,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BowelArrowDown7 {
+        ImageWidgetClass BowelArrowDown2 {
          visible 0
          clipchildren 1
          inheritalpha 0
@@ -2224,7 +2224,7 @@ FrameWidgetClass HudFrameWidget {
          filter 1
          nocache 0
         }
-        ImageWidgetClass BowelArrowDown8 {
+        ImageWidgetClass BowelArrowDown3 {
          visible 1
          clipchildren 1
          inheritalpha 0
