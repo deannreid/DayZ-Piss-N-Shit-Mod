@@ -46,17 +46,21 @@ class BowelMdfr: ModifierBase
 		//super.OnTick(player, deltaT);
 		player.GetMovementState(m_MovementState);
 		float bowel = player.GetStatBowel().Get();
+		Print("[PNS :: DEBUG] -- PlayerModifier [BOWEL] : Bowel Current State:" + bowel);
 		float metabolic_speed = MiscGameplayFunctions.GetBowelMetabolicSpeed(m_MovementState.m_iMovement);
 		
 		float modifier = bowel*PlayerConstants.SL_BOWEL_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
 		metabolic_speed *= modifier; //non linear shaping for consumption curve (comment out to have it linear)
+		Print("[PNS :: DEBUG] -- PlayerModifier [BOWEL] : metabolic_speed Current State:" + metabolic_speed);
 		
 		player.GetStatBowel().Add( (-metabolic_speed * deltaT) );
+		Print("[PNS :: DEBUG] -- PlayerModifier [BOWEL] : GetStatBowel() Current State:" + -metabolic_speed * deltaT);
 		
 		if ( bowel >= PlayerConstants.HIGH_BOWEL_THRESHOLD )
 		{	
 			if( !player.GetStomach().IsDigesting() )	
 				player.AddHealth("GlobalHealth", "Health", -PlayerConstants.HIGH_BOWEL_DAMAGE_PER_SEC * deltaT );
+			Print("[PNS :: DEBUG] -- PlayerModifier [BOWEL] : player.AddHealth() Current State:" + -PlayerConstants.HIGH_BOWEL_DAMAGE_PER_SEC * deltaT);
 		}	
 	}
 }

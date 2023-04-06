@@ -42,6 +42,7 @@ modded class PlayerBase extends ManBase
 			m_StatBladder = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BLADDER));
 		}
 		return m_StatBladder;
+		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatBladder Current State:" +m_StatBladder);
 	}
 	
 	PlayerStat<float> GetStatBowel() {
@@ -50,17 +51,20 @@ modded class PlayerBase extends ManBase
 			m_StatBowel = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BOWEL));
 		}
 		return m_StatBowel;
+		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatBowel Current State:" +m_StatBowel);
 	}	
 
 	EStatLevels GetStatLevelBladder()
 	{
 		float bladder = GetStatBladder().Get();
 		return GetStatLevel(bladder, PlayerConstants.SL_BLADDER_CRITICAL, PlayerConstants.SL_BLADDER_LOW, PlayerConstants.SL_BLADDER_NORMAL, PlayerConstants.SL_BLADDER_HIGH);
+		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatLevelBladder Current State:" +bladder);
 	}
 
 	EStatLevels GetStatLevelBowel()
 	{
 		float bowel = GetStatBowel().Get();
 		return GetStatLevel(bowel, PlayerConstants.SL_BOWEL_CRITICAL, PlayerConstants.SL_BOWEL_LOW, PlayerConstants.SL_BOWEL_NORMAL, PlayerConstants.SL_BOWEL_HIGH);
+		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatLevelBowel Current State:" +bowel);
 	}
 }

@@ -21,7 +21,11 @@ modded class PCOHandlerStats {
 	
 	void PCOHandlerStats()
 	{
+		RegisterPCO(new PlayerStatsPCO_v100);
+		RegisterPCO(new PlayerStatsPCO_v101);
+		RegisterPCO(new PlayerStatsPCO_current);
 		RegisterPCO(new PlayerStatsPCO_PNSMod);
+		
 		//GetPNSLogger().WriteDebug("Registered Player Stats" + PlayerStatsPCO_PNSMOD);
 	}
 };
@@ -35,6 +39,7 @@ class PlayerStatsPCO_PNSMod extends PlayerStatsPCO_Base {
 
 	override void Init()
 	{	
+		super.Init();
 		RegisterStat(	EPlayerStats_PNSMod.BLADDER, 		new PlayerStat<float> 	(0,5000,500,"Bladder", EPSstatsFlags.EMPTY)	);
 		Print("[PNS - PlayerStats] :: STAT: Bladder," + EPlayerStats_PNSMod.BLADDER + " Registered");
 		RegisterStat(	EPlayerStats_PNSMod.BOWEL, 			new PlayerStat<float>  	(0,5000,500,"Bowel" , EPSstatsFlags.EMPTY)	);
