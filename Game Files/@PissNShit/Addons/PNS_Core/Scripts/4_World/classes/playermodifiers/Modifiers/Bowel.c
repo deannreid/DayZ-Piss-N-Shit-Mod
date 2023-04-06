@@ -30,12 +30,20 @@ class BowelMdfr: ModifierBase
 		DisableDeactivateCheck();	
 	}
 
-	override bool ActivateCondition(PlayerBase player){return true;}
-	override void OnReconnect(PlayerBase player){}
-	override bool DeactivateCondition(PlayerBase player){return false;}
+	override bool ActivateCondition(PlayerBase player){
+		return true;
+	}
+	
+	override void OnReconnect(PlayerBase player){
+	}
+	
+	override bool DeactivateCondition(PlayerBase player){
+		return false;
+	}
 		
 	override void OnTick(PlayerBase player, float deltaT)
 	{
+		//super.OnTick(player, deltaT);
 		player.GetMovementState(m_MovementState);
 		float bowel = player.GetStatBowel().Get();
 		float metabolic_speed = MiscGameplayFunctions.GetBowelMetabolicSpeed(m_MovementState.m_iMovement);

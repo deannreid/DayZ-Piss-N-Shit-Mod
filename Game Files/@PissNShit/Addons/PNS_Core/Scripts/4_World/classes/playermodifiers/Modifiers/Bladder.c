@@ -15,8 +15,7 @@
  * 05/12/2022 - Initial Code Development
  */
 
-class BladderMdfr: ModifierBase
-{
+class BladderMdfr: ModifierBase{
 
 	float m_LastBladderLevel;
 	
@@ -39,6 +38,7 @@ class BladderMdfr: ModifierBase
 	
 	override void OnTick(PlayerBase player, float deltaT)
 	{
+		//super.OnTick(player, deltaT);
 		player.GetMovementState(m_MovementState);
 		float urine = player.GetStatBladder().Get();
 		float metabolic_speed = MiscGameplayFunctions.GetBladderMetabolicSpeed(m_MovementState.m_iMovement);	

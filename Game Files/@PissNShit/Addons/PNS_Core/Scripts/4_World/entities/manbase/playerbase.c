@@ -23,11 +23,18 @@ modded class PlayerBase extends ManBase
 	protected PlayerStat<float> m_StatBowel;
 		
     void PlayerBase() {
+		//super.Init();
         /* 
 		 * Level to Increase by 1 every 10 Minutes
 		 * or increase by 1 when player drinks a full container of liquid
 		 */
     }
+	
+	override void Init() {
+	
+		super.Init();
+		
+	}
 
 	PlayerStat<float> GetStatBladder() {
 		if( !m_StatBladder && GetPlayerStats())
