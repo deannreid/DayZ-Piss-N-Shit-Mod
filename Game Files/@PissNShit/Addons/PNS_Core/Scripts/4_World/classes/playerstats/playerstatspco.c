@@ -35,14 +35,19 @@ modded class PCOHandlerStats {
 		BOWEL
 	}
 
-class PlayerStatsPCO_PNSMod extends PlayerStatsPCO_Base {
-
+//class PlayerStatsPCO_PNSMod extends PlayerStatsPCO_Base {
+class PlayerStatsPCO_PNSMod extends PlayerStatsPCO_Base
+{	
 	override void Init()
 	{	
 		super.Init();
 		RegisterStat(	EPlayerStats_PNSMod.BLADDER, 		new PlayerStat<float> 	(0,5000,500,"Bladder", EPSstatsFlags.EMPTY)	);
 		Print("[PNS - PlayerStats] :: STAT: Bladder," + EPlayerStats_PNSMod.BLADDER + " Registered");
-		RegisterStat(	EPlayerStats_PNSMod.BOWEL, 			new PlayerStat<float>  	(0,5000,500,"Bowel" , EPSstatsFlags.EMPTY)	);
+		RegisterStat(	EPlayerStats_PNSMod.BOWEL, 			new PlayerStat<float>  	(0,20000,600,"Bowel" , EPSstatsFlags.EMPTY)	);
 		Print("[PNS - PlayerStats] :: STAT: Bowel," + EPlayerStats_PNSMod.BOWEL   + " Registered");
+		
+		
+		//RegisterStat(EPlayerStats_v100.ENERGY,  			new PlayerStat<float>	(0,20000,600,"Energy",EPSstatsFlags.EMPTY) );
+		//RegisterStat(EPlayerStats_v100.WATER,  			    new PlayerStat<float>	(0,5000,500,"Water",EPSstatsFlags.EMPTY) );
 	}
 }

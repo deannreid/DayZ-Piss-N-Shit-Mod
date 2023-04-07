@@ -94,7 +94,7 @@ modded class MissionServer {
 				}
 			}
 			GetRPCManager().SendRPC( "RPCPlayerSats", "SyncPlayers", new Param1<ref TFloatArray> (PlayerValues), true, sender );
-			Print("[PNS - PlayerValue DEBUG] :: Player: " + player + " Stats: " + "Health, Blood, Bowel, Bladder, WaterLevel, EnergyLevel, IsAlive, DiseaseCount, EnvironmentTemp");
+			Print("[PNS - PlayerValue DEBUG] :: Player: " + player + " Stats: " + "Bowel, Bladder, WaterLevel, EnergyLevel, IsAlive, DiseaseCount, EnvironmentTemp, Health");			
 			Print("[PNS - PlayerValue DEBUG] :: Player: " + player + " Stats: " + PlayerValues);
 		}
 	}	

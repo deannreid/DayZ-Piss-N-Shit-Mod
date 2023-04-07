@@ -1053,7 +1053,7 @@ modded class IngameHud extends Hud
 		}
 	}
 	
-	InventoryQuickbar GetQuickbar()
+	override InventoryQuickbar GetQuickbar()
 	{
 		return m_Quickbar;
 	}

@@ -35,30 +35,25 @@ class BladderMdfr: ModifierBase {
 	override void OnReconnect(PlayerBase player){}
 	override bool DeactivateCondition(PlayerBase player){return false;}
 	
-	
 	override void OnTick(PlayerBase player, float deltaT)
 	{
 		//super.OnTick(player, deltaT);
 		player.GetMovementState(m_MovementState);
-		float urine = player.GetStatBladder().Get();
-		Print("[PNS :: DEBUG] -- PlayerModifier [BLADDER] : Bladder Current State:" + urine);
-		float metabolic_speed = MiscGameplayFunctions.GetBladderMetabolicSpeed(m_MovementState.m_iMovement);		
-		float modifier = urine*PlayerConstants.SL_BLADDER_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
+		float bladder = player.GetStatBladder().Get();
+		Print("[PNS :: DEBUG] -- PlayerModifier [BLADDER] : Bladder Current State:" + bladder);
+		float metabolic_speed = MiscGameplayFunctions.GetBladderMetabolicSpeed(m_MovementState.m_iMovement);
+		float modifier = bladder*PlayerConstants.SL_BLADDER_MAX + PlayerConstants.CONSUMPTION_MULTIPLIER_BASE;
 		metabolic_speed *= modifier; //non linear shaping for consumption curve (comment out to have it linear)
 		Print("[PNS :: DEBUG] -- PlayerModifier [BLADDER] : metabolic_speed Current State:" + metabolic_speed);
-		
-		
 		player.GetStatBladder().Add( (-metabolic_speed * deltaT) );
 		Print("[PNS :: DEBUG] -- PlayerModifier [BLADDER] : GetStatBladder() Current State:" + -metabolic_speed * deltaT);
 		
-		
-		if ( urine >= PlayerConstants.HIGH_BLADDER_THRESHOLD )
+		if ( bladder >= PlayerConstants.HIGH_BLADDER_THRESHOLD )
 		{	
 			if( !player.GetStomach().IsDigesting() )	
-				Print("Player Is Not Digesting");
-				// Will Lower health by set amount if the player doesn't pee 
 				player.AddHealth("GlobalHealth", "Health", -PlayerConstants.HIGH_BLADDER_DAMAGE_PER_SEC * deltaT );
 			Print("[PNS :: DEBUG] -- PlayerModifier [BLADDER] : player.AddHealth() Current State:" + -PlayerConstants.HIGH_BLADDER_DAMAGE_PER_SEC * deltaT);
-		}
-	}
+		}	
+		Print("==============================");
+	}	
 }
