@@ -20,7 +20,7 @@ modded class ModifiersManager {
 	override void Init () {
 		super.Init();
 		 
-		//AddModifier  (new BladderMdfr);  //It's Broken :|
+		AddModifier  (new BladderMdfr);  //It's Broken :|
 		AddModifier  (new BowelMdfr);
 	
 	}

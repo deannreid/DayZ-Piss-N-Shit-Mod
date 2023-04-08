@@ -22,23 +22,8 @@ modded class PlayerBase extends ManBase
 	protected PlayerStat<float> m_StatBladder;
 	protected PlayerStat<float> m_StatBowel;
 		
-    void PlayerBase() {
-		//super.Init();
-        /* 
-		 * Level to Increase by 1 every 10 Minutes
-		 * or increase by 1 when player drinks a full container of liquid
-		 */
-    }
-	
-	override void Init() {
-	
-		super.Init();
-		
-	}
-
 	PlayerStat<float> GetStatBladder() {
-		if( !m_StatBladder && GetPlayerStats())
-		{
+		if( !m_StatBladder && GetPlayerStats()) {
 			m_StatBladder = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BLADDER));
 		}
 		return m_StatBladder;
@@ -46,23 +31,20 @@ modded class PlayerBase extends ManBase
 	}
 	
 	PlayerStat<float> GetStatBowel() {
-		if( !m_StatBowel && GetPlayerStats())
-		{
+		if( !m_StatBowel && GetPlayerStats()) {
 			m_StatBowel = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BOWEL));
 		}
 		return m_StatBowel;
 		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatBowel Current State:" +m_StatBowel);
 	}	
 
-	EStatLevels GetStatLevelBladder()
-	{
+	EStatLevels GetStatLevelBladder() {
 		float bladder = GetStatBladder().Get();
 		return GetStatLevel(bladder, PlayerConstants.SL_BLADDER_CRITICAL, PlayerConstants.SL_BLADDER_LOW, PlayerConstants.SL_BLADDER_NORMAL, PlayerConstants.SL_BLADDER_HIGH);
 		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatLevelBladder Current State:" +bladder);
 	}
 
-	EStatLevels GetStatLevelBowel()
-	{
+	EStatLevels GetStatLevelBowel() {
 		float bowel = GetStatBowel().Get();
 		return GetStatLevel(bowel, PlayerConstants.SL_BOWEL_CRITICAL, PlayerConstants.SL_BOWEL_LOW, PlayerConstants.SL_BOWEL_NORMAL, PlayerConstants.SL_BOWEL_HIGH);
 		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatLevelBowel Current State:" +bowel);

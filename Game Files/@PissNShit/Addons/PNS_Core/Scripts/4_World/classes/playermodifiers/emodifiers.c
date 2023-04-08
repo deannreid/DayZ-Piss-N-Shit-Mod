@@ -73,7 +73,9 @@ enum eModifiersPNS {
 	MDF_FLIES,
 	MDF_DROWNING,
 
-
+   /*
+	* Seems to not enjoy having these at the top, bit of a crappy bypass but oh well.
+	*/
 	MDF_BLADDER,
 	MDF_BOWEL,
 		// ---------------only count bellow
