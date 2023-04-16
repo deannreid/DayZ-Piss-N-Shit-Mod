@@ -15,14 +15,16 @@
  * 05/12/2022 - Initial Code Development
  */
 
+//Save the extra file
+enum eModifiersPNS {
+	MDF_BLADDER = 1337,
+	MDF_BOWEL,
+}
+
 modded class ModifiersManager {
-
 	override void Init () {
-		super.Init();
-		 
+		super.Init(); 
 		AddModifier  ( new BladderMdfr );
-	//	AddModifier  ( new BowelMdfr );
-	
+		AddModifier  ( new BowelMdfr );
 	}
-
 }
