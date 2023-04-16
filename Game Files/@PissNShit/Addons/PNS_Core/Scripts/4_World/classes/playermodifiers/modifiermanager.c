@@ -16,13 +16,10 @@
  */
 
 modded class ModifiersManager {
-
 	override void Init () {
 		super.Init();
-		 
+		
 		AddModifier  ( new BladderMdfr );
-	//	AddModifier  ( new BowelMdfr );
-	
+		AddModifier  ( new BowelMdfr );
 	}
-
 }

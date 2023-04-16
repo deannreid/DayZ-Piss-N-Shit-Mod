@@ -49,7 +49,7 @@ class BowelMdfr: ModifierBase {
 		
 		player.GetStatBowel().Add( (-metabolic_speed * deltaT) );
 			Print("[PNS :: DEBUG] -- PlayerModifier [BOWEL] : GetStatBowel() Current State:" + -metabolic_speed * deltaT);
-			Print("==============================");
+
 		
 		if ( bowel >= PlayerConstants.HIGH_BOWEL_THRESHOLD )
 		{	

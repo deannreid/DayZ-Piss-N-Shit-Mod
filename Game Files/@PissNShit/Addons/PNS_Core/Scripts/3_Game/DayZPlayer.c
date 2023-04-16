@@ -1,11 +1,4 @@
-enum PNSPlayerConstants
-{
-
-//! ---------------------------------------------------------
-//! ---------------------- ACTIONS --------------------------
-//! ---------------------------------------------------------    
-
-CMD_ACTION_URINATE = 9954,
-CMD_ACTION_DEFICATE = 9955
-
+enum PNSPlayerConstants {
+	CMD_ACTION_URINATE = 9954,
+	CMD_ACTION_DEFICATE = 9955,
 }

@@ -22,12 +22,10 @@ modded class DayZGame {
     void SetPNSConfig(PNSConfig config) {
         pnsConfig = config;
 		Print("SetPNSConfig: " + config );
-		//GetPNSLogger().WriteDebug("SetPNSConfig" + pnsConfig );
     }
 	
 	ref PNSConfig GetPNSConfig() {
         return pnsConfig;
 		Print("GetPNSConfig: " + pnsConfig );
-		//GetPNSLogger().WriteDebug("GetPNSConfig" + pnsConfig );
     }	
 }

@@ -17,7 +17,7 @@
 
 enum eModifiersPNS {
 
-//enum eModifiers
+//default eModifiers
 	MDF_TEMPERATURE = 1,//must start at 1
 	MDF_BLOOD_REGEN,
 	MDF_BURNING,
