@@ -44,16 +44,6 @@ modded class MissionServer {
 		}			
     }
 	
-	override void OnMissionStart() {
-		super.OnMissionStart();
-        Print("[PNS - missionServer] OnMissionStart - Server");
-	}
-	
-	override void OnMissionFinish() {
-        super.OnMissionFinish();
-        Print("[PNS - missionServer] OnMissionFinish - Server");
-    }
-	
 	override void InvokeOnConnect(PlayerBase player, PlayerIdentity identity) {
 		Print("[PNS - missionServer] :: Plugin InvokeOnConnect!");
         super.InvokeOnConnect(player, identity);
@@ -78,10 +68,6 @@ modded class MissionServer {
 				
 				if (PlayerIdentity_.GetPlayerId() == sender.GetPlayerId())
 				{
-
-					/*
-					 * Params for PNS Mod - Still need added to Array
-					 */
 					PlayerValues.Insert(player.GetStatBowel().Get());
 					PlayerValues.Insert(player.GetStatBladder().Get());
 					PlayerValues.Insert(player.GetStatWater().Get());
@@ -98,7 +84,6 @@ modded class MissionServer {
 			Print("[PNS - PlayerValue DEBUG] :: Player: " + player + " Stats: " + PlayerValues);
 		}
 	}	
-	
 	
 	private void SavePNSConfig() {
         JsonFileLoader<PNSConfig>.JsonSaveFile(configDir, pnsConfig);

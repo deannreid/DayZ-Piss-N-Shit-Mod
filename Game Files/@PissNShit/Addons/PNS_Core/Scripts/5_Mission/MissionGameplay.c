@@ -27,7 +27,6 @@ modded class MissionGameplay {
 	PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());	
 	
 	override void OnInit() {
-		
 		Print("[PNS - LogHandler] :: [DEBUG] :: ([missionGameplay] :: OnInit - Client"); 
 		//PNSKeybindHelper.RegisterBind("OBJECT TO BIND", PNSBinds.Press, "TITLE OF OBJECT", this);
 		PNSKeybindHelper.RegisterBind("PNSSettings", PNSBinds.Press, "STR_PNS_SETTINGS", this);
@@ -35,20 +34,53 @@ modded class MissionGameplay {
 		PNSKeybindHelper.RegisterBind("PNSShit", PNSBinds.Press,  "STR_PNS_SHIT", this);
 		PNSKeybindHelper.RegisterBind("PNSVomit", PNSBinds.Press,  "STR_PNS_VOMIT", this);
 		
-        if ( !m_HudRootWidget ) {
-			Print ( "Loading PNS UI Element" );
+		if ( !m_HudRootWidget )
+		{
+			m_HudRootWidget             = GetGame().GetWorkspace().CreateWidgets("PNS_Core/Assets/Layouts/UIV2/day_z_hud.layout");
 			
-            m_HudRootWidget            = GetGame().GetWorkspace().CreateWidgets("PNS_Core/Assets/Layouts/UIV2/day_z_hud.layout");
 			m_HudRootWidget.Show(false);
-						
+			
+			m_Chat.Init(m_HudRootWidget.FindAnyWidget("ChatFrameWidget"));
+			
+			m_ActionMenu.Init( m_HudRootWidget.FindAnyWidget("ActionsPanel"), TextWidget.Cast( m_HudRootWidget.FindAnyWidget("DefaultActionWidget") ) );
+			
 			m_Hud.Init( m_HudRootWidget.FindAnyWidget("HudPanel") );
-
-			//PNS
+			
+			
+						//PNS
 			Class.CastTo(h_BladderImage, m_HudRootWidget.FindAnyWidget("ImageBladder"));
-			Class.CastTo(h_BowelImage, m_HudRootWidget.FindAnyWidget("ImageBowel"));				
-	   }		
+			Class.CastTo(h_BowelImage, m_HudRootWidget.FindAnyWidget("ImageBowel"));	
+			
+			
+			// von enabled icon
+			m_MicrophoneIcon = ImageWidget.Cast( m_HudRootWidget.FindAnyWidget("mic") );
+			m_MicrophoneIcon.Show(false);
+			
+			// von voice level
+			m_VoiceLevels = m_HudRootWidget.FindAnyWidget("VoiceLevelsPanel");
+			m_VoiceLevelsWidgets = new map<int, ImageWidget>; // [key] voice level
+			m_VoiceLevelTimers = new map<int,ref WidgetFadeTimer>; // [key] voice level
+		
+			if ( m_VoiceLevels )
+			{
+				m_VoiceLevelsWidgets.Set(VoiceLevelWhisper, ImageWidget.Cast( m_VoiceLevels.FindAnyWidget("Whisper") ));
+				m_VoiceLevelsWidgets.Set(VoiceLevelTalk, ImageWidget.Cast( m_VoiceLevels.FindAnyWidget("Talk") ));
+				m_VoiceLevelsWidgets.Set(VoiceLevelShout, ImageWidget.Cast( m_VoiceLevels.FindAnyWidget("Shout") ));
+				
+				m_VoiceLevelTimers.Set(VoiceLevelWhisper, new WidgetFadeTimer);
+				m_VoiceLevelTimers.Set(VoiceLevelTalk, new WidgetFadeTimer);
+				m_VoiceLevelTimers.Set(VoiceLevelShout, new WidgetFadeTimer);
+			}
+			
+			HideVoiceLevelWidgets();
+			
+			// chat channel
+			m_ChatChannelArea		= m_HudRootWidget.FindAnyWidget("ChatChannelPanel");
+			m_ChatChannelText		= TextWidget.Cast( m_HudRootWidget.FindAnyWidget("ChatChannelText") );
+		}			
         super.OnInit();
 	}
+	
 	
 	void MissionGameplay() {
 		if (GetGame().IsClient()) {
@@ -78,11 +110,9 @@ modded class MissionGameplay {
 			int PSD_Bladder = ClientPlayerData[7];
 			int PSD_Bowel   = ClientPlayerData[8];
 			string Disease_Message;
-			if(PSD_Disease <= 0) 
-			{
+			if(PSD_Disease <= 0) {
 				Disease_Message = " Diseases: None";
-			} else 
-			{
+			} else {
 				Disease_Message = " Diseases: " + PSD_Disease.ToString();
 			}
 		}
