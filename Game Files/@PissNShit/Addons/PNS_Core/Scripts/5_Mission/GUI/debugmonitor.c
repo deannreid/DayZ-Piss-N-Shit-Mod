@@ -21,14 +21,14 @@ modded class DebugMonitor
 		m_pNamesListboxWidget.AddItem("HEALTH:", NULL, 0);
 		m_pValuesListboxWidget.AddItem("", NULL, 0);
 
-		m_pNamesListboxWidget.AddItem("BLOOD:", NULL, 0);
-		m_pValuesListboxWidget.AddItem("", NULL, 0);
+		//m_pNamesListboxWidget.AddItem("BLOOD:", NULL, 0);
+		//m_pValuesListboxWidget.AddItem("", NULL, 0);
 
 		m_pNamesListboxWidget.AddItem("BODY TEMP:", NULL, 0);
 		m_pValuesListboxWidget.AddItem("", NULL, 0);
 		
-		m_pNamesListboxWidget.AddItem("LAST DAMAGE:", NULL, 0);
-		m_pValuesListboxWidget.AddItem("", NULL, 0);
+		//m_pNamesListboxWidget.AddItem("LAST DAMAGE:", NULL, 0);
+		//m_pValuesListboxWidget.AddItem("", NULL, 0);
 		
 		m_pNamesListboxWidget.AddItem("BLADDER LEVEL:", NULL, 0);
 		m_pValuesListboxWidget.AddItem("", NULL, 0);
@@ -36,11 +36,11 @@ modded class DebugMonitor
 		m_pNamesListboxWidget.AddItem("BOWEL LEVEL:", NULL, 0);
 		m_pValuesListboxWidget.AddItem("", NULL, 0);		
 		
-		m_pNamesListboxWidget.AddItem("POSITION:", NULL, 0);
-		m_pValuesListboxWidget.AddItem("", NULL, 0);
+		//m_pNamesListboxWidget.AddItem("POSITION:", NULL, 0);
+		//m_pValuesListboxWidget.AddItem("", NULL, 0);
 
-		m_pNamesListboxWidget.AddItem("MODIFIERS:", NULL, 0);
-		m_pValuesListboxWidget.AddItem("", NULL, 0);
+		//m_pNamesListboxWidget.AddItem("MODIFIERS:", NULL, 0);
+		//m_pValuesListboxWidget.AddItem("", NULL, 0);
 		
 		//m_DebugFloatsListWidget.AddItem(key,NULL,0);
 		//m_DebugFloatsListWidget.SetItem(i,value.ToString(),NULL,1);		
