@@ -95,9 +95,4 @@ modded class MissionServer {
 		Print("[PNS - ConfigManager] :: File " + configDir+pnsConfig + " Loaded");
         pnsConfig.ValidateOptions();
     }
-	
-	override void OnInit() {
-		super.OnInit();	
-		Print("[PNS - missionServer] :: Init - Server!");
-	}
 }
