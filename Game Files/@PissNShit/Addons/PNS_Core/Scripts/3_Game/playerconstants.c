@@ -66,6 +66,10 @@ modded class PlayerConstants {
 	static const float BOWEL_GAIN_THRESHOLD_HC_MINUS_LOW	= THRESHOLD_HEAT_COMFORT_MINUS_WARNING;
 	static const float BOWEL_GAIN_THRESHOLD_HC_MINUS_HIGH	= THRESHOLD_HEAT_COMFORT_MINUS_CRITICAL;	
 	
+	static const float HIGH_BLADDER_THRESHOLD				= SL_BLADDER_HIGH;    //High Threshold BLADDER threshold from which BLADDER affects health
+	static const float HIGH_BOWEL_THRESHOLD			 		= SL_BOWEL_HIGH;   // High Threshold BOWEL threshold from which BOWEL affects health	
+	
+	
 	static const float BLADDER_GAIN_HC_PLUS_LOW				= 0;
 	static const float BLADDER_GAIN_HC_PLUS_HIGH			= 0.4;
 
