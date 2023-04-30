@@ -29,10 +29,10 @@ class CfgMods {
 	class PissNShit {
 		dir="PNS_Core";
 		type="mod";
-		picture="PNS_Core/Assets/Images/logo/logoOpaque.edds";
-		logoSmall="PNS_Core/Assets/Images/logo/logoOpaque.edds";
-		logo="PNS_Core/Assets/Images/logo/logoOpaque.edds";
-		logoOver="PNS_Core/Assets/Images/logo/logoOpaque.edds";
+		picture="PNS_Core\Assets\Images\logo\logoOpaque.edds";
+		logoSmall="PNS_Core\Assets\Images\logo\logoOpaque.edds";
+		logo="PNS_Core\Assets\Images\logo\logoOpaque.edds";
+		logoOver="PNS_Core\Assets\Images\logo\logoOpaque.edds";
 		tooltip="Piss N' Shit Mod";
 		overview="A mod to add the ability to fart uncontrolably, think of it like a human POX Vial.";
 		action="https://steamcommunity.com/sharedfiles/filedetails/?id=2946290672";
