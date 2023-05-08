@@ -21,7 +21,8 @@ modded class PlayerBase extends ManBase
     private float m_BowelLevel;  // Poop level is between 0 and 10, where 0 means the player doesn't need to urinate and 1 means they urgently need to urinate
 	protected PlayerStat<float> m_StatBladder;
 	protected PlayerStat<float> m_StatBowel;
-		
+	
+
 	EStatLevels GetStatLevelBladder() {
 		float bladder = GetStatBladder().Get();
 		return GetStatLevel(bladder, PlayerConstants.SL_BLADDER_CRITICAL, PlayerConstants.SL_BLADDER_LOW, PlayerConstants.SL_BLADDER_NORMAL, PlayerConstants.SL_BLADDER_HIGH);
@@ -51,16 +52,18 @@ modded class PlayerBase extends ManBase
 	PlayerStat<float> GetStatBladder() {
 		if( !m_StatBladder && GetPlayerStats()) {
 			m_StatBladder = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BLADDER));
+			//m_StatBladder = "2500";
 		}
 		return m_StatBladder;
-		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatBladder Current State:" +m_StatBladder);
+		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatBladder Current State:" + m_StatBladder);
 	}
 	
 	PlayerStat<float> GetStatBowel() {
 		if( !m_StatBowel && GetPlayerStats()) {
 			m_StatBowel = PlayerStat<float>.Cast(GetPlayerStats().GetStatObject(EPlayerStats_PNSMod.BOWEL));
+			//m_StatBowel = "2500";
 		}
 		return m_StatBowel;
-		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatBowel Current State:" +m_StatBowel);
+		Print("[PNS :: DEBUG] -- PlayerBase [BLADDER] : GetStatBowel Current State:" + m_StatBowel);
 	}		
 }

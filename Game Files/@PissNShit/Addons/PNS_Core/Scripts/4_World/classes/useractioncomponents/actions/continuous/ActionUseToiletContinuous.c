@@ -1,88 +1,72 @@
-class ActionUseToiletContinuousCB : ActionContinuousBaseCB {
-
-	override void CreateActionComponent() { 
-	
-		float time = SetAnimDuration(m_ActionData.m_Target);
-		m_ActionData.m_ActionComponent = new CAContinuousTime ( time );	
+class ActionUseToiletContinuousCB : ActionContinuousBaseCB
+{
+	override void CreateActionComponent()
+	{
+		m_ActionData.m_ActionComponent = new CAContinuousRepeat(UATimeSpent.SHAVE);
 	}
-
-	float SetAnimDuration( ActionTarget target ) {
-		return 2500;
-	}
-	
 };
 
-class ActionUseToiletContinuous: ActionContinuousBase {
-
-	void ActionUseToiletContinuous() {
+class ActionUseToiletContinuous: ActionContinuousBase
+{	
+	void ActionUseToiletContinuous()
+	{
 		m_CallbackClass = ActionUseToiletContinuousCB;
-		m_CommandUID = DayZPlayerConstants.CMD_GESTUREFB_SHRUG;
+		m_CommandUID = DayZPlayerConstants.CMD_ACTIONFB_DRINKWELL;
 		m_FullBody = true;
-		m_StanceMask = DayZPlayerConstants.STANCEMASK_ERECT | DayZPlayerConstants.STANCEMASK_CROUCH;
-		m_SpecialtyWeight = UASoftSkillsWeight.ROUGH_HIGH;
+		m_StanceMask = DayZPlayerConstants.STANCEMASK_CROUCH;
+		m_Text = "Take a Shit in the Well";
 	}
-
+		
+	override typename GetInputType()
+	{
+		return ContinuousInteractActionInput;
+	}
+	
 	override void CreateConditionComponents()  
 	{
 		m_ConditionItem = new CCINone;
-		m_ConditionTarget = new CCTNonRuined( UAMaxDistances.BASEBUILDING );
-	}	
+		m_ConditionTarget = new CCTCursor(UAMaxDistances.DEFAULT);
+	}
 	
-	override string GetText() {
-	
-		PlayerBase player = PlayerBase.Cast( GetGame().GetPlayer() );
+	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )
+	{		
+		return target.GetObject() && target.GetObject().IsWell();
+	}
+
+	override void OnStart(ActionData action_data)
+	{
+		super.OnStart(action_data);
 		
-		if ( player ) { 
-		
-			ActionManagerBase actmgr = player.GetActionManager();
-			Object targetObject = actmgr.FindActionTarget().GetObject();
-			
-			//Using BBP Toilet as Placeholder*
-			Land_Misc_Toilet_Dry objectToilet = Land_Misc_Toilet_Dry.Cast( targetObject );
-			
-			if( objectToilet ) {
-				return "STR_PNS_PISS";	
-			}
-			return "Use Continuous";
-		}
+		action_data.m_Player.TryHideItemInHands(true);
 	}
-	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item ) {	
-		Object targetObject = target.GetObject();
-		Land_Misc_Toilet_Dry objectToilet = Land_Misc_Toilet_Dry.Cast( targetObject );
-			
-		if ( targetObject ) {
-			if ( objectToilet ) {
-				return true;
-			}
-		}
-		return false;
+
+	override void OnEnd(ActionData action_data)
+	{
+		action_data.m_Player.TryHideItemInHands(false);
 	}
-	
-	override bool HasProgress() {
-		return false;
-	}
-	
-	override bool SetupAction( PlayerBase player, ActionTarget target, ItemBase item, out ActionData action_data, Param extra_data = NULL ) {	
-		if( super.SetupAction( player, target, item, action_data, extra_data ) )
+
+	override void OnFinishProgressServer( ActionData action_data )
+	{
+		//Print("OnFinishProgressServer");
+		Param1<float> nacdata = Param1<float>.Cast( action_data.m_ActionComponent.GetACData() );
+		if(nacdata)
 		{
-			SetAnimation( target );
-			return true;
+			float amount = UAQuantityConsumed.DRINK;
+			action_data.m_Player.Consume(NULL,amount, EConsumeType.ENVIRO_WELL);
 		}
 		
-		return false;
+		if ( action_data.m_Player.HasBloodyHands() && !action_data.m_Player.GetInventory().FindAttachment( InventorySlots.GLOVES ) )
+		{
+			action_data.m_Player.SetBloodyHandsPenalty();
+		}
 	}
 	
-	protected void SetAnimation( ActionTarget target ) {
-		Object targetObject = target.GetObject();
-		Land_Misc_Toilet_Dry objectToilet = Land_Misc_Toilet_Dry.Cast( targetObject );
-		
-		switch( targetObject ) {
-			case objectToilet:
-				m_CommandUID = DayZPlayerConstants.CMD_ACTIONFB_VOMIT;
-				break;
-			default:
-				m_CommandUID = DayZPlayerConstants.CMD_GESTUREFB_SHRUG;
-				break;
+	override void OnEndAnimationLoopServer( ActionData action_data )
+	{
+		//Print("OnEndAnimationLoopServer");
+		if(action_data.m_Player.HasBloodyHands())
+		{
+			action_data.m_Player.InsertAgent(eAgents.CHOLERA, 1);
 		}
-	}		
-}
+	}
+};
