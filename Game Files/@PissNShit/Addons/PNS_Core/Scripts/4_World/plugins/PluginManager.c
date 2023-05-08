@@ -23,7 +23,7 @@ modded class PluginManager {
 			//              Module Class :           Client  |  Server
 			/*Server Only Plugins*/
 			//RegisterPlugin("", 			 		 true, 		true);		
-			RegisterPlugin("PNSLogHelper",			 false, 	true);
+			//RegisterPlugin("PNSLogHelper",			 false, 	true);
 			RegisterPlugin("PNSServerRPC", 			 false, 	true);
 
 			/*Client Only Plugins*/
