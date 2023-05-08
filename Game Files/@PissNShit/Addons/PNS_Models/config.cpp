@@ -27,6 +27,25 @@ class CfgPatches {
 		};
 	};
 };
+class CfgMods
+{
+	class Spur_BeltBag
+	{
+		dir="PNS_Models";
+		type="mod";
+		dependencies[]= {
+			"World"
+		};
+		class defs {
+			class worldScriptModule {
+				value="";
+				files[]= {
+					"PNS_Models/scripts/4_world"
+				};
+			};
+		};
+	};
+};
 class cfgVehicles {
 	class Inventory_Base;
 	class Edible_Base;
@@ -34,7 +53,7 @@ class cfgVehicles {
 		scope=2;
 		displayName="$STR_PNS_MDL_POOP";
 		descriptionShort="$STR_PNS_MDL_POOP_DESC";
-		model="PNS_Models\data\Models\PileOPoo\Poop.p3d";
+		model="PNS_Models\data\Models\PileOPoo\PileOPoo_Base_Model.p3d";
 		weight=350;
 		absorbency=1;
 		itemSize[]={2,2};
@@ -157,10 +176,10 @@ class cfgVehicles {
 		scope=2;
 		displayName="$STR_PNS_MDL_GAMERBOTTLE";
 		descriptionShort="$STR_PNS_MDL_GAMERBOTTLE_DESC";
-		model="PNS_Models\data\Models\GamerBottle\GamerBottle.p3d";
+		model="PNS_Models\data\Models\GamerBottle\GamerBottle_Base.p3d";
 		hiddenSelectionsTextures[]=
 		{
-			"PNS_Models\data\Models\GamerBottle\GamerBottle.paa"
+			"PNS_Models\data\Models\GamerBottle\texture\GamerBottle_Tex.paa"
 		};
 		hiddenSelections[]=
 		{
@@ -198,13 +217,6 @@ class cfgVehicles {
 					};
 				};
 			};
-		};
-		class Nutrition {
-			fullnessIndex=1;
-			energy=150;
-			water=350;
-			nutritionalIndex=1;
-			toxicity=200;
 		};
 		class AnimEvents {
 			class SoundWeapon {
@@ -250,9 +262,16 @@ class cfgVehicles {
 		descriptionShort="$STR_PNS_MDL_GAMERBOTTLE_URINE_DESC";
 		hiddenSelectionsTextures[]=
 		{
-			"PNS_Models\data\Models\GamerBottle\GamerBottle.paa"
+			"PNS_Models\data\Models\GamerBottle\texture\GamerBottle_Tex.paa"
 		};
 		varQuantityInit=500;
 		varQuantityMin=0;
+		class Nutrition {
+			fullnessIndex=1;
+			energy=150;
+			water=350;
+			nutritionalIndex=1;
+			toxicity=200;
+		};
 	};
 };
